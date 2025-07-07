@@ -1,25 +1,30 @@
-name: Deploy to personal repo for Vercel
+name: git push into another repo to deploy to vercel
 
 on:
   push:
-    branches: ['main']
+    branches: [main]
 
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
-
+    container: pandoc/latex
     steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-
-      - name: Push to personal repo
+      - uses: actions/checkout@v2
+      - name: Install mustache (to update the date)
+        run: apk add ruby && gem install mustache
+      - name: creates output
+        run: sh ./build.sh
+      - name: Pushes to another repository
+        id: push_directory
         uses: cpina/github-action-push-to-another-repository@main
         env:
           API_TOKEN_GITHUB: ${{ secrets.PERSONAL_GITHUB_TOKEN }}
         with:
-          source-directory: '.' # 보통 build된 폴더가 아니라면 루트
-          destination-github-username: 0-chan
-          destination-repository-name: hanuldrone-homepage
-          target-branch: main
+          source-directory: 'output'
+          destination-github-username: your-github-username
+          destination-repository-name: your-github-repository-name
           user-email: ${{ secrets.GIT_EMAIL }}
-          commit-message: 'ci: deploy from org repo ${{ github.sha }}'
+          commit-message: ${{ github.event.commits[0].message }}
+          target-branch: main
+      - name: Test get variable exported by push-to-another-repository
+        run: echo $DESTINATION_CLONED_DIRECTORY
