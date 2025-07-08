@@ -1,5 +1,83 @@
 ---
-description:
-globs:
-alwaysApply: false
+alwaysApply: true
 ---
+
+# Hanul Drone 프로젝트 구조 가이드
+
+## 프로젝트 개요
+
+- **단일 페이지 애플리케이션**: 모든 콘텐츠가 하나의 스크롤 가능한 페이지에 구성
+- **Next.js 15 App Router** 기반의 현대적인 드론 회사 홈페이지
+- **참고 사이트**: [manna.aero](https://www.manna.aero/) 스타일 적용
+
+## 기술 스택
+
+- **프레임워크**: Next.js 15 (App Router)
+- **프론트엔드**: React 19, TypeScript
+- **스타일링**: TailwindCSS 4, Shadcn UI
+- **유틸리티**: usehooks-ts, date-fns, zod
+- **개발 도구**: Biome v2 (포맷팅/린팅)
+- **테스팅**: Jest
+- **배포**: Vercel
+
+## 디렉토리 구조
+
+```
+app/                    # Next.js app router
+├── globals.css        # 전역 스타일과 Tailwind 임포트
+├── layout.tsx         # 루트 레이아웃
+├── page.tsx           # 메인 홈페이지
+└── api/               # API 라우트 (문의 폼)
+
+components/
+├── ui/                # Shadcn UI 컴포넌트
+├── layout/            # 레이아웃 컴포넌트
+│   ├── Header.tsx     # 고정 네비게이션
+│   ├── Footer.tsx     # 사이트 푸터
+│   └── ScrollToTop.tsx # 스무스 스크롤 유틸리티
+└── sections/          # 홈페이지 섹션들
+    ├── HeroSection.tsx
+    ├── ServicesSection.tsx
+    ├── UseCasesSection.tsx
+    ├── AboutSection.tsx
+    ├── NewsSection.tsx
+    └── ContactSection.tsx
+
+lib/
+├── utils.ts           # 일반 유틸리티
+├── constants.ts       # 사이트 설정
+├── animations.ts      # Framer Motion 설정
+└── validations.ts     # Zod 스키마
+
+types/
+├── index.ts           # 공통 타입
+├── services.ts        # 서비스 관련 타입
+└── api.ts             # API 응답 타입
+
+public/
+├── images/            # 최적화된 이미지
+├── videos/            # 드론 영상
+└── icons/             # SVG 아이콘
+```
+
+## 프로젝트 별칭
+
+- `@/components` - 컴포넌트 디렉토리
+- `@/lib` - 라이브러리 디렉토리
+- `@/types` - 타입 정의 디렉토리
+
+## 핵심 원칙
+
+1. **단일 페이지 구조**: 모든 콘텐츠를 하나의 페이지에 섹션별로 구성
+2. **접근성 우선**: WCAG 2.1 AA 준수
+3. **성능 최적화**: Lighthouse 점수 90점 이상 목표
+4. **반응형 디자인**: 모바일 우선 접근법
+5. **관리자 친화적**: 중앙화된 콘텐츠 관리
+
+## 주요 설정 파일
+
+- [next.config.ts](mdc:next.config.ts) - Next.js 설정
+- [tailwind.config.ts](mdc:tailwind.config.ts) - TailwindCSS 설정
+- [biome.json](mdc:biome.json) - 코드 포맷팅 및 린팅
+- [tsconfig.json](mdc:tsconfig.json) - TypeScript 설정
+- [components.json](mdc:components.json) - Shadcn UI 설정

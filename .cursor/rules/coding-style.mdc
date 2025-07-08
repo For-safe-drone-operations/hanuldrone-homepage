@@ -1,5 +1,93 @@
 ---
-description:
-globs:
-alwaysApply: false
+alwaysApply: true
 ---
+
+# 코딩 스타일 가이드라인
+
+## 기본 규칙
+
+- **항상 화살표 함수 사용**: `const ComponentName = () => {}`
+- **함수 대신 const 사용**: 적절한 TypeScript 타입과 함께
+- **조건부 렌더링**: 얼리 리턴 패턴 사용
+- **의미 있는 네이밍**: 명확하고 설명적인 이름 사용
+
+## 네이밍 컨벤션
+
+- **이벤트 핸들러**: `handle` 접두사 (handleClick, handleSubmit)
+- **컴포넌트**: PascalCase, 설명적인 이름
+- **Props/변수**: camelCase, 설명적인 이름
+- **파일명**: 컴포넌트 이름과 일치
+- **섹션**: 명확한 시맨틱 이름 (HeroSection, ServicesSection)
+
+## TypeScript 엄격한 규칙
+
+1. **완전한 코드 생성**: 플레이스홀더 없음, 불가능한 경우 주석으로 설명
+2. **명확한 주석**: 각 코드 단계를 설명하는 인라인 주석과 JSDoc 헤더
+3. **에러 체크**: 에러 체크 및 타입 유효성 검사 구현
+4. **엄격한 타입**: 엄격한 TypeScript 표기법, 필요시 새로운 타입 정의
+   - `any` 타입 사용 금지
+   - 논-널 어설션 연산자(`!`) 사용 금지
+   - `unknown`으로 캐스팅 금지 (예: `as unknown as T`)
+5. **문자열 표준**:
+   - 문자열에 큰따옴표(`"`) 사용
+   - 연산자 연결 대신 템플릿 문자열이나 `.join()` 사용
+
+## 코드 품질 원칙
+
+- **DRY 원칙**: 재사용 가능한 컴포넌트 생성
+- **타입 안전성**: 모든 props에 대한 인터페이스 정의
+- **성능**: 이미지 최적화 및 지연 로딩 콘텐츠
+- **접근성 우선**: WCAG 2.1 AA 준수
+
+## 예시 코드 구조
+
+```tsx
+const ServiceCard = ({ service }: { service: Service }) => {
+  if (!service) return null
+
+  const handleCardClick = () => {
+    // 서비스 상세 처리
+  }
+
+  const handleKeyDown = (event: React.KeyboardEvent) => {
+    if (event.key === 'Enter' || event.key === ' ') {
+      handleCardClick()
+    }
+  }
+
+  return (
+    <div
+      className='group cursor-pointer rounded-lg border p-6 transition-all hover:shadow-lg'
+      tabIndex={0}
+      aria-label={`${service.title} 서비스 자세히 보기`}
+      onClick={handleCardClick}
+      onKeyDown={handleKeyDown}
+    >
+      <h3 className='text-xl font-semibold'>{service.title}</h3>
+      <p className='mt-2 text-gray-600'>{service.description}</p>
+    </div>
+  )
+}
+```
+
+## 개발 워크플로우
+
+- **Biome v2**: 포맷팅 및 린팅
+- **Pre-commit hooks**: 코드 품질 보장
+- **TypeScript strict mode**: 활성화
+- **ESLint rules**: React 모범 사례
+
+## 성능 최적화
+
+- **Next.js Image 컴포넌트**: 이미지 최적화
+- **지연 로딩**: 폴드 아래 콘텐츠
+- **코드 스플리팅**: 최적의 번들 크기
+- **Web Vitals**: 모니터링 및 최적화
+
+## 금지 사항
+
+- CSS 파일이나 인라인 스타일 사용 (TailwindCSS만 사용)
+- `any` 타입 사용
+- 논-널 어설션 연산자 사용
+- 문자열 연결 연산자 사용
+- 접근성 속성 누락
