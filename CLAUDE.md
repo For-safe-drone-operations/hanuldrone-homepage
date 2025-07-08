@@ -28,7 +28,7 @@ The site focuses on clear service/solution presentation, easy administrator main
 
 - **Framework**: Next.js 15 (App Router)
 - **Frontend**: React 19, TypeScript
-- **Styling**: TailwindCSS 4, Shadcn UI
+- **Styling**: TailwindCSS 3, Shadcn UI
 - **Utilities**: usehooks-ts, date-fns, zod
 - **Development**: Biome v2 (formatting/linting)
 - **Testing**: Jest (unit testing)
@@ -201,11 +201,18 @@ public/
 // lib/constants.ts
 export const SERVICES = [
   {
-    id: 'aerial-survey',
-    title: '항공 측량',
-    description: '정밀한 드론 측량으로 정확한 지형 데이터 제공',
-    image: '/images/services/aerial-survey.jpg',
-    features: ['고해상도 매핑', '3D 모델링', '실시간 데이터'],
+    id: 'inspection',
+    title: '드론 검사',
+    description: '안전하고 정확한 드론 검사 서비스 제공',
+    image: '/images/services/inspection.jpg',
+    features: ['고해상도 촬영', '안전 검사', '실시간 모니터링'],
+  },
+  {
+    id: 'delivery',
+    title: '드론 배송',
+    description: '빠르고 효율적인 드론 배송 솔루션',
+    image: '/images/services/delivery.jpg',
+    features: ['자동 비행', '실시간 추적', '안전 배송'],
   },
   // ... more services
 ] as const
@@ -271,7 +278,7 @@ const contactFormSchema = z.object({
   email: z.string().email('올바른 이메일 형식을 입력해주세요'),
   company: z.string().optional(),
   message: z.string().min(10, '메시지는 10자 이상 입력해주세요'),
-  service: z.enum(['aerial-survey', 'inspection', 'delivery']),
+  service: z.enum(['inspection', 'delivery']),
 })
 ```
 

@@ -1,10 +1,11 @@
 import Image from 'next/image'
+import Footer from '@/components/layout/Footer'
 
 export default function Home() {
   return (
-    <div className='relative min-h-screen overflow-hidden'>
+    <div className='relative'>
       {/* 배경 그라데이션 */}
-      <div className='absolute inset-0 bg-gradient-to-b from-blue-400 via-blue-300 to-cyan-200' />
+      <div className='absolute inset-0 bg-gradient-to-b from-blue-400 via-blue-300 to-cyan-200 h-screen' />
 
       {/* 구름 효과 */}
       <div className='absolute top-20 left-10 w-32 h-16 bg-white/20 rounded-full blur-xl' />
@@ -103,6 +104,9 @@ export default function Home() {
         className='absolute top-1/2 right-8 w-16 h-10 bg-gradient-to-br from-red-400 to-red-600 rounded-full shadow-lg animate-bounce'
         style={{ animationDelay: '2.5s' }}
       ></div>
+      
+      {/* Footer */}
+      <Footer />
     </div>
   )
 }
