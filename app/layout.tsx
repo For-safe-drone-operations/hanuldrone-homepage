@@ -15,7 +15,7 @@ export default function RootLayout({
   return (
     <html lang='ko'>
       <body
-        className={`${pretendard.variable} font-sans antialiased bg-gradient-to-b from-sky-400 via-sky-200 to-sky-50 min-h-screen`}
+        className={`${pretendard.variable} font-sans antialiased bg-gradient-to-b from-blue-500 via-sky-300 to-white min-h-screen`}
       >
         {children}
       </body>

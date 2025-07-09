@@ -75,6 +75,11 @@
   font-display: swap;
 }
 
+/* 커스텀 그라데이션 */
+.bg-gradient-radial {
+  background-image: radial-gradient(circle, var(--tw-gradient-stops));
+}
+
 /* 기본 스타일 */
 * {
   box-sizing: border-box;
@@ -82,7 +87,11 @@
   margin: 0;
 }
 
-html,
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px; /* sticky header 높이만큼 offset */
+}
+
 body {
   max-width: 100vw;
   overflow-x: hidden;
