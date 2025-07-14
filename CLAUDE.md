@@ -340,6 +340,25 @@ const contactFormSchema = z.object({
 - Core accessibility patterns
 - Performance optimization settings
 
+## Git Commit Guidelines
+
+**IMPORTANT: NEVER include "Claude Code" references in commit messages**
+
+- **NO "🤖 Generated with [Claude Code]" footers**
+- **NO "Co-Authored-By: Claude" signatures**
+- **NO Claude-related branding in any commit messages**
+- Use clean, professional commit messages focused on the actual changes
+- Follow conventional commit format: `feat:`, `fix:`, `chore:`, etc.
+
+Example of CORRECT commit message:
+```
+feat: 협력 파트너 섹션 추가
+
+- 우측에서 좌측으로 흘러가는 무한 스크롤 애니메이션 구현
+- 한서대학교, 국토교통부, 서산시, 태안군, 국방기술진흥연구소 로고 추가
+- 각 로고별 최적화된 크기 설정 및 반응형 디자인
+```
+
 ## Questions to Ask When Uncertain
 
 ### Content & Business Logic

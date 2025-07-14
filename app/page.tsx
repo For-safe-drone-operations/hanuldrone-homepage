@@ -1,59 +1,10 @@
 'use client'
 
-import { useEffect, useState } from 'react'
 import Header from '@/components/layout/Header'
 import Footer from '@/components/layout/Footer'
+import PartnersSection from '@/components/sections/PartnersSection'
 
 export default function Home() {
-  const [scrollY, setScrollY] = useState(0)
-  const [heroHeight, setHeroHeight] = useState(0)
-  
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrollY(window.scrollY)
-    }
-    
-    const handleResize = () => {
-      setHeroHeight(window.innerHeight)
-    }
-    
-    window.addEventListener('scroll', handleScroll)
-    window.addEventListener('resize', handleResize)
-    
-    // 초기값 설정
-    setHeroHeight(window.innerHeight)
-    
-    return () => {
-      window.removeEventListener('scroll', handleScroll)
-      window.removeEventListener('resize', handleResize)
-    }
-  }, [])
-  
-  // 스크롤 진행률 계산 (0-1 사이)
-  const scrollProgress = Math.min(scrollY / heroHeight, 1)
-  
-  // 배경 색상 계산 (스크롤에 따라 밤하늘로 변화)
-  const getBackgroundGradient = () => {
-    const dayColors = {
-      from: 'from-blue-400',
-      via: 'via-blue-300',
-      to: 'to-blue-100'
-    }
-    
-    const nightColors = {
-      from: 'from-blue-900',
-      via: 'via-blue-800',
-      to: 'to-blue-600'
-    }
-    
-    if (scrollProgress < 0.3) {
-      return `bg-gradient-to-b ${dayColors.from} ${dayColors.via} ${dayColors.to}`
-    } else if (scrollProgress < 0.7) {
-      return `bg-gradient-to-b from-blue-600 via-blue-500 to-blue-300`
-    } else {
-      return `bg-gradient-to-b ${nightColors.from} ${nightColors.via} ${nightColors.to}`
-    }
-  }
   return (
     <div>
       {/* Header */}
@@ -63,15 +14,9 @@ export default function Home() {
       <main>
         {/* Hero Section */}
         <section id="home" className="relative min-h-screen pt-16 overflow-hidden">
-          {/* Sky Background with Gradient - Dynamic based on scroll */}
-          <div className={`absolute inset-0 ${getBackgroundGradient()} transition-all duration-1000 ease-out`}></div>
+          {/* Sky Background */}
+          <div className="absolute inset-0 bg-gradient-to-b from-blue-400 via-blue-300 to-blue-100"></div>
           
-          {/* Clouds Animation */}
-          <div className="absolute inset-0 overflow-hidden">
-            <div className="absolute top-20 -left-20 w-32 h-16 bg-white/20 rounded-full blur-sm animate-pulse"></div>
-            <div className="absolute top-32 right-10 w-40 h-20 bg-white/15 rounded-full blur-sm animate-pulse delay-300"></div>
-            <div className="absolute top-40 left-1/3 w-24 h-12 bg-white/10 rounded-full blur-sm animate-pulse delay-700"></div>
-          </div>
           
           {/* Content */}
           <div className="relative z-10 min-h-screen flex items-center justify-center">
@@ -149,6 +94,9 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        {/* Partners Section */}
+        <PartnersSection />
 
         {/* Solutions Section */}
         <section id="solutions" className="min-h-screen py-20 bg-white">
