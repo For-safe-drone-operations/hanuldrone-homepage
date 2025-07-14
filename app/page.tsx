@@ -2,6 +2,7 @@
 
 import Header from '@/components/layout/Header'
 import Footer from '@/components/layout/Footer'
+import Hero from '@/components/sections/Hero'
 import PartnersSection from '@/components/sections/PartnersSection'
 
 export default function Home() {
@@ -13,87 +14,7 @@ export default function Home() {
       {/* 메인 콘텐츠 영역 */}
       <main>
         {/* Hero Section */}
-        <section id="home" className="relative min-h-screen pt-16 overflow-hidden">
-          {/* Sky Background */}
-          <div className="absolute inset-0 bg-gradient-to-b from-blue-400 via-blue-300 to-blue-100"></div>
-          
-          
-          {/* Content */}
-          <div className="relative z-10 min-h-screen flex items-center justify-center">
-            <div className="container mx-auto px-4">
-              {/* Main Title */}
-              <div className="text-center mb-16">
-                <div className="mb-8">
-                  <h1 className="text-6xl md:text-8xl font-bold text-white mb-4 leading-tight">
-                    한울드론
-                  </h1>
-                  <div className="text-2xl md:text-3xl text-white/90 font-light mb-8">
-                    하늘을 여는 첨단 기술
-                  </div>
-                </div>
-                
-                {/* Subtitle with emphasis */}
-                <div className="max-w-4xl mx-auto mb-12">
-                  <p className="text-xl md:text-2xl text-white/80 leading-relaxed">
-                    지능형 드론 기술로 사람과 지역사회를 연결하고,<br/>
-                    지속 가능한 사회적 가치를 창출합니다
-                  </p>
-                </div>
-                
-                {/* Key Features */}
-                <div className="grid md:grid-cols-3 gap-8 mb-16 max-w-5xl mx-auto">
-                  <div className="text-center">
-                    <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <div className="w-8 h-8 bg-white rounded-full"></div>
-                    </div>
-                    <h3 className="text-lg font-semibold text-white mb-2">자율비행 기술</h3>
-                    <p className="text-white/70 text-sm">AI 기반 자율비행 및 군집비행 기술</p>
-                  </div>
-                  <div className="text-center">
-                    <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <div className="w-8 h-8 bg-white rounded-full"></div>
-                    </div>
-                    <h3 className="text-lg font-semibold text-white mb-2">국방 솔루션</h3>
-                    <p className="text-white/70 text-sm">방산 전문 기술로 국방 안보 강화</p>
-                  </div>
-                  <div className="text-center">
-                    <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <div className="w-8 h-8 bg-white rounded-full"></div>
-                    </div>
-                    <h3 className="text-lg font-semibold text-white mb-2">사회적 가치</h3>
-                    <p className="text-white/70 text-sm">지역사회 공공안전 및 물류 혁신</p>
-                  </div>
-                </div>
-                
-                {/* CTA Buttons */}
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <a 
-                    href="#solutions" 
-                    className="bg-white text-blue-600 px-8 py-4 rounded-full font-semibold hover:bg-gray-100 transition-all duration-200 shadow-lg"
-                  >
-                    서비스 보기
-                  </a>
-                  <a 
-                    href="#contact" 
-                    className="bg-white/20 text-white px-8 py-4 rounded-full font-semibold hover:bg-white/30 transition-all duration-200 backdrop-blur-sm"
-                  >
-                    문의하기
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          {/* Scroll Indicator */}
-          <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white/60 animate-bounce">
-            <div className="flex flex-col items-center">
-              <span className="text-sm mb-2">스크롤</span>
-              <div className="w-6 h-10 border-2 border-white/40 rounded-full flex justify-center">
-                <div className="w-1 h-3 bg-white/40 rounded-full mt-2 animate-pulse"></div>
-              </div>
-            </div>
-          </div>
-        </section>
+        <Hero />
 
         {/* Partners Section */}
         <PartnersSection />
