@@ -58,13 +58,6 @@ const ServiceCard = ({ service }: ServiceCardProps) => {
         ))}
       </div>
       
-      <motion.button
-        className="mt-8 px-6 py-3 bg-blue-600 text-white rounded-full font-medium hover:bg-blue-700 transition-colors duration-200"
-        whileHover={{ scale: 1.05 }}
-        whileTap={{ scale: 0.95 }}
-      >
-        자세히 알아보기
-      </motion.button>
     </motion.div>
   )
 }

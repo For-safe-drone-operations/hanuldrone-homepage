@@ -5,6 +5,7 @@ import Footer from '@/components/layout/Footer'
 import Hero from '@/components/sections/Hero'
 import PartnersSection from '@/components/sections/PartnersSection'
 import ServicesSection from '@/components/sections/ServicesSection'
+import CompanySection from '@/components/sections/CompanySection'
 
 export default function Home() {
   return (
@@ -22,31 +23,7 @@ export default function Home() {
         <ServicesSection />
 
         {/* Company Section */}
-        <section id="company" className="min-h-screen py-20 bg-gray-50">
-          <div className="container mx-auto px-4">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-6">
-              회사 소개
-            </h2>
-            <p className="text-center text-gray-600 mb-16 max-w-4xl mx-auto">
-              (주)한울드론은 2022년에 설립된 기술 혁신 기업으로, 첨단 드론 기술을 활용하여 다양한 산업 분야의 문제를 해결하고 있습니다.<br />
-              우리는 고객의 비즈니스 성장과 발전을 위한 최적의 솔루션을 제공하기 위해 끊임없이 연구하고 개발합니다.
-            </p>
-            <div className="grid md:grid-cols-2 gap-8">
-              <div className="bg-white p-8 rounded-lg shadow-sm">
-                <h3 className="text-xl font-bold mb-4">혁신적인 기술</h3>
-                <p className="text-gray-600">
-                  최신 기술을 활용한 드론 솔루션으로 산업 현장의 효율성과 안전성을 높입니다.
-                </p>
-              </div>
-              <div className="bg-white p-8 rounded-lg shadow-sm">
-                <h3 className="text-xl font-bold mb-4">전문 인력</h3>
-                <p className="text-gray-600">
-                  드론 기술 분야의 전문가들이 모여 최고의 솔루션을 개발합니다.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
+        <CompanySection />
 
         {/* Vision & Mission Section */}
         <section id="vision" className="min-h-screen py-20 bg-white">

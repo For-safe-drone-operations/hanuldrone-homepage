@@ -81,7 +81,7 @@ const ServicesSection = () => {
         >
           <motion.h2 
             variants={titleVariants}
-            className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6"
+            className="text-3xl md:text-4xl font-bold text-gray-900 mb-6"
           >
             핵심 서비스
           </motion.h2>
