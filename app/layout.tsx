@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { pretendard } from '@/lib/fonts'
+import { Analytics } from '@vercel/analytics/react'
 import './globals.css'
 
 export const metadata: Metadata = {
@@ -18,6 +19,7 @@ export default function RootLayout({
         className={`${pretendard.variable} font-sans antialiased bg-gradient-to-b from-blue-500 via-sky-300 to-white min-h-screen`}
       >
         {children}
+        <Analytics />
       </body>
     </html>
   )
