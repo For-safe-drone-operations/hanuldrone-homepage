@@ -55,7 +55,7 @@ const CompanySection = () => {
   }
 
   return (
-    <section id="company" className="min-h-screen py-24 bg-gray-50" ref={ref}>
+    <section id="company" className="py-24 bg-gray-50" ref={ref}>
       <div className="container mx-auto px-4">
         <motion.div
           variants={containerVariants}

@@ -71,7 +71,7 @@ const ServicesSection = () => {
   }
 
   return (
-    <section id="solutions" className="min-h-screen py-24 bg-white" ref={ref}>
+    <section id="solutions" className="py-24 bg-white" ref={ref}>
       <div className="container mx-auto px-4">
         <motion.div
           variants={containerVariants}

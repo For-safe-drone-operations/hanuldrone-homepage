@@ -33,10 +33,10 @@ const Header = () => {
               회사소개
             </a>
             <a 
-              href="#vision" 
+              href="#history" 
               className="text-gray-700 hover:text-blue-600 transition-colors duration-200"
             >
-              비전&미션
+              연혁
             </a>
             <a 
               href="#values" 
@@ -45,10 +45,10 @@ const Header = () => {
               핵심가치
             </a>
             <a 
-              href="#history" 
+              href="#vision" 
               className="text-gray-700 hover:text-blue-600 transition-colors duration-200"
             >
-              연혁
+              비전&미션
             </a>
           </nav>
 
