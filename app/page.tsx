@@ -4,6 +4,7 @@ import Header from '@/components/layout/Header'
 import Footer from '@/components/layout/Footer'
 import Hero from '@/components/sections/Hero'
 import PartnersSection from '@/components/sections/PartnersSection'
+import ServicesSection from '@/components/sections/ServicesSection'
 
 export default function Home() {
   return (
@@ -16,21 +17,9 @@ export default function Home() {
         {/* Hero Section */}
         <Hero />
 
-        {/* Partners Section */}
-        <PartnersSection />
 
         {/* Solutions Section */}
-        <section id="solutions" className="min-h-screen py-20 bg-white">
-          <div className="container mx-auto px-4">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-6">
-              핵심 서비스
-            </h2>
-            <p className="text-center text-gray-600 mb-16 max-w-3xl mx-auto">
-              한울드론은 첨단 기술과 혁신적인 솔루션으로<br />
-              다양한 산업 분야에 최적화된 드론 서비스를 제공합니다.
-            </p>
-          </div>
-        </section>
+        <ServicesSection />
 
         {/* Company Section */}
         <section id="company" className="min-h-screen py-20 bg-gray-50">
@@ -181,6 +170,9 @@ export default function Home() {
             </p>
           </div>
         </section>
+
+        {/* Partners Section */}
+        <PartnersSection />
       </main>
 
       {/* Footer */}

@@ -1,21 +1,25 @@
+import Image from 'next/image'
+import Link from 'next/link'
+
 const Header = () => {
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-200/50">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-white backdrop-blur-md border-b border-gray-200/50">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* 로고 */}
-          <div className="flex items-center">
-            <span className="text-2xl font-bold text-blue-600">한울드론</span>
-          </div>
+          <Link href="/" className="flex items-center">
+            <Image
+              src="/svg/companyLogo.svg"
+              alt="한울드론 로고"
+              width={120}
+              height={40}
+              priority
+              className="h-10 w-auto"
+            />
+          </Link>
 
           {/* 네비게이션 */}
           <nav className="hidden md:flex items-center space-x-8">
-            <a 
-              href="#home" 
-              className="text-gray-700 hover:text-blue-600 transition-colors duration-200"
-            >
-              홈
-            </a>
             <a 
               href="#solutions" 
               className="text-gray-700 hover:text-blue-600 transition-colors duration-200"
@@ -45,12 +49,6 @@ const Header = () => {
               className="text-gray-700 hover:text-blue-600 transition-colors duration-200"
             >
               연혁
-            </a>
-            <a 
-              href="#contact" 
-              className="text-gray-700 hover:text-blue-600 transition-colors duration-200"
-            >
-              문의
             </a>
           </nav>
 
