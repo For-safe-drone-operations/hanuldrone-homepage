@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import ContactModal from '@/components/ui/ContactModal'
 
 const Header = () => {
   return (
@@ -54,12 +55,11 @@ const Header = () => {
 
           {/* 문의 버튼 */}
           <div className="flex items-center">
-            <a 
-              href="#contact" 
-              className="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition-colors duration-200"
-            >
-              문의하기
-            </a>
+            <ContactModal>
+              <button className="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition-colors duration-200">
+                문의하기
+              </button>
+            </ContactModal>
           </div>
         </div>
       </div>

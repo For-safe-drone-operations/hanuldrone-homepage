@@ -34,7 +34,7 @@ const Footer = () => {
             ))}
           </div>
           <div className={copyrightStyles}>
-{siteConfig.footer.copyright.replace('2024', `2023-${currentYear}`)}
+ⓒ 2023-{currentYear} 한울드론. All Rights Reserved.
           </div>
         </div>
       </div>

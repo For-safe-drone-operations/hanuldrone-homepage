@@ -180,6 +180,90 @@ export const siteConfig = {
         { name: '국방기술진흥연구소', file: 'krit.svg' },
       ],
     },
+    contact: {
+      title: '문의하기',
+      description:
+        '한울드론의 드론 솔루션에 대해 궁금한 점이 있으시면 언제든지 문의해 주세요.',
+      subtitle: '전문 상담을 통해 최적의 솔루션을 제안해 드립니다.',
+      modal: {
+        title: '문의',
+        description:
+          '간단한 정보를 입력해 주시면 빠른 시일 내에 연락드리겠습니다.',
+      },
+      form: {
+        fields: {
+          name: {
+            label: '이름',
+            placeholder: '이름을 입력해 주세요',
+            required: true,
+            errorMessage: '이름을 입력해 주세요',
+          },
+          company: {
+            label: '회사명',
+            placeholder: '회사명을 입력해 주세요 (선택사항)',
+            required: false,
+          },
+          email: {
+            label: '이메일',
+            placeholder: 'example@company.com',
+            required: true,
+            errorMessage: '올바른 이메일 주소를 입력해 주세요',
+          },
+          phone: {
+            label: '연락처',
+            placeholder: '010-1234-5678 (선택사항)',
+            required: false,
+          },
+          message: {
+            label: '문의 내용',
+            placeholder: '궁금하신 내용을 작성해 주세요',
+            required: true,
+            errorMessage: '문의 내용을 입력해 주세요 (최소 10자)',
+            minLength: 10,
+          },
+        },
+        buttons: {
+          submit: '문의 전송',
+          submitting: '전송 중...',
+          cancel: '취소',
+        },
+        messages: {
+          success: {
+            title: '문의가 성공적으로 전송되었습니다!',
+            description: '빠른 시일 내에 담당자가 연락드리겠습니다.',
+          },
+          error: {
+            title: '문의 전송에 실패했습니다.',
+            description: '잠시 후 다시 시도해 주시거나 직접 연락해 주세요.',
+          },
+        },
+      },
+      contactInfo: {
+        title: '직접 연락',
+        description:
+          '급한 문의사항이 있으시면 아래 연락처로 직접 연락해 주세요.',
+        items: [
+          {
+            icon: '📧',
+            label: '이메일',
+            value: 'hanuldrone3@hanuldrone.com',
+            link: 'mailto:hanuldrone3@hanuldrone.com',
+          },
+          {
+            icon: '📍',
+            label: '주소',
+            value: '충청남도 태안군 남면 곰섬로 236-49, 216호(창업2관)',
+            link: null,
+          },
+          {
+            icon: '🕒',
+            label: '운영시간',
+            value: '평일 09:00 - 18:00 (주말 및 공휴일 휴무)',
+            link: null,
+          },
+        ],
+      },
+    },
   },
   footer: {
     companyInfo: [
@@ -191,6 +275,7 @@ export const siteConfig = {
       { id: 'business-number', text: '사업자 등록번호 : 596-81-02847' },
       { id: 'email', text: 'hanuldrone3@hanuldrone.com' },
     ],
+    copyright: 'ⓒ 2024 한울드론. All Rights Reserved.',
   },
 }
 

@@ -1,22 +1,30 @@
 import { siteConfig } from '../../siteConfig'
+import { useEffect, useState } from 'react'
 
 const Hero = () => {
+  const [mounted, setMounted] = useState(false)
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
   return (
     <section id='home' className='relative min-h-screen pt-16 overflow-hidden'>
       {/* Video Background */}
       <div className='absolute inset-0'>
-        <video
-          className='w-full h-full object-cover'
-          autoPlay
-          loop
-          muted
-          playsInline
-        >
-          <source
-            src='/video/CES_HanulDrone_homepage_muted.mp4'
-            type='video/mp4'
-          />
-        </video>
+        {mounted && (
+          <video
+            className='w-full h-full object-cover'
+            autoPlay
+            loop
+            muted
+            playsInline
+          >
+            <source
+              src='/video/CES_HanulDrone_homepage_muted.mp4'
+              type='video/mp4'
+            />
+          </video>
+        )}
       </div>
 
       {/* Content */}
