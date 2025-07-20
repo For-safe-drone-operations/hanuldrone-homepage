@@ -20,8 +20,8 @@ const ServiceCard = ({ service }: ServiceCardProps) => {
       transition={{ type: "spring", stiffness: 300, damping: 20 }}
     >
       <div className="flex items-center mb-6">
-        <span className="text-5xl mr-4">{service.icon}</span>
-        <h3 className="text-2xl md:text-3xl font-bold text-gray-900">
+        <span className="text-3xl md:text-4xl mr-4">{service.icon}</span>
+        <h3 className="text-xl md:text-2xl font-bold text-gray-900">
           {service.title}
         </h3>
       </div>

@@ -79,13 +79,13 @@ const ServicesSection = () => {
         >
           <motion.h2 
             variants={titleVariants}
-            className="text-3xl md:text-4xl font-bold text-gray-900 mb-6"
+            className="text-2xl md:text-4xl font-bold text-gray-900 mb-6"
           >
             핵심 서비스
           </motion.h2>
           <motion.p 
             variants={titleVariants}
-            className="text-xl md:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed"
+            className="text-base md:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed"
           >
             한울드론은 첨단 기술과 혁신적인 솔루션으로
             <br />

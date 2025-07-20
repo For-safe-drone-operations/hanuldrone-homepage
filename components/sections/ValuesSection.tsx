@@ -89,13 +89,13 @@ const ValuesSection = () => {
         >
           <motion.h2 
             variants={titleVariants}
-            className="text-3xl md:text-4xl font-bold text-gray-900 mb-6"
+            className="text-2xl md:text-4xl font-bold text-gray-900 mb-6"
           >
             핵심 가치
           </motion.h2>
           <motion.p 
             variants={titleVariants}
-            className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto"
+            className="text-base md:text-lg text-gray-600 max-w-3xl mx-auto"
           >
             한울드론이 추구하는 핵심 가치를 소개합니다.
           </motion.p>
@@ -116,8 +116,8 @@ const ValuesSection = () => {
               <div className="flex-1 max-w-lg">
                 <div className="bg-gray-50 p-6 rounded-xl border-l-4 border-blue-600">
                   <div className="flex items-center gap-3 mb-3">
-                    <span className="text-2xl font-bold text-blue-600">{value.number}</span>
-                    <h3 className="text-xl font-bold text-gray-900">{value.title}</h3>
+                    <span className="text-xl md:text-2xl font-bold text-blue-600">{value.number}</span>
+                    <h3 className="text-lg md:text-xl font-bold text-gray-900">{value.title}</h3>
                   </div>
                   <p className="text-gray-600 leading-relaxed">
                     {value.description}

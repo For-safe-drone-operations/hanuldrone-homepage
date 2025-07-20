@@ -29,7 +29,7 @@ export default function Home() {
         {/* History Section */}
         <section id="history" className="py-20 bg-white">
           <div className="container mx-auto px-4">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-6">
+            <h2 className="text-2xl md:text-4xl font-bold text-center mb-6">
               주요 연혁
             </h2>
             <p className="text-center text-gray-600 mb-16">
@@ -78,7 +78,7 @@ export default function Home() {
         {/* Vision & Mission Section */}
         <section id="vision" className="py-20 bg-gray-50">
           <div className="container mx-auto px-4">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-6">
+            <h2 className="text-2xl md:text-4xl font-bold text-center mb-6">
               비전 및 미션
             </h2>
             <p className="text-center text-gray-600 mb-16">

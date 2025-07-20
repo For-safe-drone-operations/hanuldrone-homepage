@@ -62,13 +62,13 @@ const CompanySection = () => {
         >
           <motion.h2 
             variants={titleVariants}
-            className="text-3xl md:text-4xl font-bold text-gray-900 mb-8"
+            className="text-2xl md:text-4xl font-bold text-gray-900 mb-8"
           >
             회사 소개
           </motion.h2>
           <motion.p 
             variants={titleVariants}
-            className="text-lg md:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed"
+            className="text-base md:text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed"
           >
             (주)한울드론은 2022년 설립된 기술 혁신 기업으로, 첨단 드론 기술로 다양한 산업 문제를 해결하고 있습니다.
             <br className="hidden md:block" />
@@ -87,17 +87,17 @@ const CompanySection = () => {
               variants={cardVariants}
               className="lg:col-span-2 bg-gradient-to-br from-blue-50 to-white p-12 rounded-3xl"
             >
-              <h3 className="text-2xl font-bold mb-6 text-blue-900">혁신적인 기술</h3>
+              <h3 className="text-xl md:text-2xl font-bold mb-6 text-blue-900">혁신적인 기술</h3>
               <p className="text-gray-700 text-lg leading-relaxed mb-6">
                 항공안전기술원 주관 '2023 드론 실증도시 구축사업'에서 화재 신속감시 및 초동진압 드론 개발 및 시연을 성공적으로 수행했습니다.
               </p>
               <div className="grid grid-cols-2 gap-4">
                 <div className="bg-white/70 backdrop-blur p-4 rounded-xl">
-                  <div className="text-3xl font-bold text-blue-600 mb-1">60%+</div>
+                  <div className="text-2xl md:text-3xl font-bold text-blue-600 mb-1">60%+</div>
                   <div className="text-sm text-gray-600">석사 이상 전문 인력</div>
                 </div>
                 <div className="bg-white/70 backdrop-blur p-4 rounded-xl">
-                  <div className="text-3xl font-bold text-blue-600 mb-1">2023</div>
+                  <div className="text-2xl md:text-3xl font-bold text-blue-600 mb-1">2023</div>
                   <div className="text-sm text-gray-600">드론 실증도시 선정</div>
                 </div>
               </div>
@@ -107,7 +107,7 @@ const CompanySection = () => {
               variants={rightCardVariants}
               className="bg-gradient-to-br from-gray-900 to-gray-700 p-8 rounded-3xl text-white"
             >
-              <h3 className="text-2xl font-bold mb-4">전문 인력</h3>
+              <h3 className="text-xl md:text-2xl font-bold mb-4">전문 인력</h3>
               <p className="text-gray-200 leading-relaxed mb-6">
                 CEO와 CTO를 비롯한 핵심 인력 모두 드론 및 무인항공 분야 석사 이상 학위를 보유한 전문가로 구성되어 있습니다.
               </p>
