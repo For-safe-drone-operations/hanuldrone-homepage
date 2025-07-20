@@ -2,33 +2,7 @@
 
 import { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
-
-const values = [
-  {
-    id: 'challenge',
-    title: '도전',
-    description: '두려움 없이 어려운 목표에 뛰어들어 미지의 영역을 개척합니다.',
-    number: '01'
-  },
-  {
-    id: 'innovation',
-    title: '혁신',
-    description: '끊임없는 기술 혁신으로 한계를 넘어 갑니다.',
-    number: '02'
-  },
-  {
-    id: 'creativity',
-    title: '창의',
-    description: '창의적 사고로 남들이 풀지 못한 문제를 해결합니다.',
-    number: '03'
-  },
-  {
-    id: 'responsibility',
-    title: '책임감',
-    description: '맡은 바 역할과 결과에 끝까지 책임감을 가집니다.',
-    number: '04'
-  }
-]
+import { siteConfig } from '../../siteConfig'
 
 const ValuesSection = () => {
   const ref = useRef(null)
@@ -91,13 +65,13 @@ const ValuesSection = () => {
             variants={titleVariants}
             className="text-2xl md:text-4xl font-bold text-gray-900 mb-6"
           >
-            핵심 가치
+            {siteConfig.sections.values.title}
           </motion.h2>
           <motion.p 
             variants={titleVariants}
             className="text-base md:text-lg text-gray-600 max-w-3xl mx-auto"
           >
-            한울드론이 추구하는 핵심 가치를 소개합니다.
+            {siteConfig.sections.values.description}
           </motion.p>
         </motion.div>
 
@@ -107,7 +81,7 @@ const ValuesSection = () => {
           animate={isInView ? "visible" : "hidden"}
           className="max-w-4xl mx-auto space-y-6"
         >
-          {values.map((value, index) => (
+          {siteConfig.sections.values.items.map((value, index) => (
             <motion.div
               key={value.id}
               variants={index % 2 === 0 ? leftCardVariants : rightCardVariants}

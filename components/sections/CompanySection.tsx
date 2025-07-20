@@ -2,6 +2,7 @@
 
 import { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
+import { siteConfig } from '../../siteConfig'
 
 const CompanySection = () => {
   const ref = useRef(null)
@@ -64,7 +65,7 @@ const CompanySection = () => {
             variants={titleVariants}
             className="text-2xl md:text-4xl font-bold text-gray-900 mb-8"
           >
-            회사 소개
+{siteConfig.sections.company.title}
           </motion.h2>
           <motion.p 
             variants={titleVariants}
@@ -93,12 +94,12 @@ const CompanySection = () => {
               </p>
               <div className="grid grid-cols-2 gap-4">
                 <div className="bg-white/70 backdrop-blur p-4 rounded-xl">
-                  <div className="text-2xl md:text-3xl font-bold text-blue-600 mb-1">60%+</div>
-                  <div className="text-sm text-gray-600">석사 이상 전문 인력</div>
+                  <div className="text-2xl md:text-3xl font-bold text-blue-600 mb-1">{siteConfig.sections.company.achievements.stat1Value}</div>
+                  <div className="text-sm text-gray-600">{siteConfig.sections.company.achievements.stat1Description}</div>
                 </div>
                 <div className="bg-white/70 backdrop-blur p-4 rounded-xl">
-                  <div className="text-2xl md:text-3xl font-bold text-blue-600 mb-1">2023</div>
-                  <div className="text-sm text-gray-600">드론 실증도시 선정</div>
+                  <div className="text-2xl md:text-3xl font-bold text-blue-600 mb-1">{siteConfig.sections.company.achievements.stat2Value}</div>
+                  <div className="text-sm text-gray-600">{siteConfig.sections.company.achievements.stat2Description}</div>
                 </div>
               </div>
             </motion.div>

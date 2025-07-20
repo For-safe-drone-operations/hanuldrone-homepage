@@ -1,3 +1,5 @@
+import { siteConfig } from '../../siteConfig'
+
 const Hero = () => {
   return (
     <section id='home' className='relative min-h-screen pt-16 overflow-hidden'>
@@ -26,15 +28,19 @@ const Hero = () => {
               <div className='mb-4'>
                 <div className='inline-block -px-1 -py-0.5 rounded-lg backdrop-blur-sm bg-black/5'>
                   <h1 className='text-5xl md:text-7xl font-bold text-white leading-tight text-left'>
-                    한울드론
+                    {siteConfig.company.name}
                   </h1>
                 </div>
               </div>
               <div className='mb-8'>
                 <div className='inline-block -px-1 -py-0.5 rounded-lg backdrop-blur-sm bg-black/3'>
                   <div className='text-3xl md:text-4xl text-white/90 font-light text-left'>
-                    AI 기반 실시간 분석으로<br/>
-                    미래 드론의 안전과 효율을 선도합니다.
+                    {siteConfig.sections.hero.subtitle.split('\n').map((line, index) => (
+                      <span key={index}>
+                        {line}
+                        {index < siteConfig.sections.hero.subtitle.split('\n').length - 1 && <br/>}
+                      </span>
+                    ))}
                   </div>
                 </div>
               </div>

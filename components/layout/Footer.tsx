@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import { siteConfig } from '../../siteConfig'
 
 const Footer = () => {
   const currentYear = new Date().getFullYear()
@@ -7,16 +8,8 @@ const Footer = () => {
   const textStyles = 'text-sm text-gray-500'
   const copyrightStyles = 'text-sm text-gray-600'
 
-  // 회사 정보를 배열로 구조화 (각 항목에 고유 id 부여)
-  const companyInfo = [
-    { id: 'company-name', text: '(주)한울드론 | 대표 엄송근' },
-    {
-      id: 'address',
-      text: '충청남도 태안군 남면 곰섬로 236-49, 216호(창업2관)',
-    },
-    { id: 'business-number', text: '사업자 등록번호 : 596-81-02847' },
-    { id: 'email', text: 'hanuldrone3@hanuldrone.com' },
-  ]
+  // 회사 정보를 config에서 가져오기
+  const companyInfo = siteConfig.footer.companyInfo
 
   return (
     <footer className='bg-white border-t border-gray-200 py-8 md:py-12'>
@@ -26,7 +19,7 @@ const Footer = () => {
           <div className='flex justify-start'>
             <Image
               src='/svg/companyLogo.svg'
-              alt='한울드론 로고'
+              alt={`${siteConfig.company.name} 로고`}
               width={120}
               height={40}
               className='h-10 w-auto opacity-80'
@@ -41,7 +34,7 @@ const Footer = () => {
             ))}
           </div>
           <div className={copyrightStyles}>
-            ⓒ 2023-{currentYear} Hanuldrone inc. All Rights Reserved.
+{siteConfig.footer.copyright.replace('2024', `2023-${currentYear}`)}
           </div>
         </div>
       </div>
