@@ -19,11 +19,11 @@ const Footer = () => {
   ]
 
   return (
-    <footer className='bg-gray-50 py-8 md:py-12'>
+    <footer className='bg-white border-t border-gray-200 py-8 md:py-12'>
       <div className='container mx-auto px-4'>
-        <div className='flex flex-col gap-6 md:gap-8'>
+        <div className='flex flex-col gap-4 md:gap-5'>
           {/* 회사 로고 */}
-          <div className='flex justify-center'>
+          <div className='flex justify-start'>
             <Image
               src='/svg/companyLogo.svg'
               alt='한울드론 로고'
@@ -33,7 +33,7 @@ const Footer = () => {
             />
           </div>
           
-          <div className='flex flex-col gap-2'>
+          <div className='flex flex-col gap-1'>
             {companyInfo.map((info) => (
               <div key={info.id} className={textStyles}>
                 {info.text}
