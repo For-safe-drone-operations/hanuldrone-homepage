@@ -19,7 +19,7 @@ export const siteConfig = {
       items: [
         {
           id: 'logistics',
-          title: '물류 드론',
+          title: '긴급 물류 배송 드론',
           description:
             '자율비행 기반의 효율적이고 안전한 물류 배송 서비스를 제공합니다. 도서지역, 산간지역 등 접근이 어려운 곳까지 신속하고 정확한 배송이 가능합니다.',
           icon: '🚁',
