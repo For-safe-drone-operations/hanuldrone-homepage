@@ -4,7 +4,7 @@ const StructuredData = () => {
   const organizationSchema = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
-    name: siteConfig.company.fullName,
+    name: siteConfig.company.name,
     alternateName: siteConfig.company.name,
     url: 'https://hanuldrone.com',
     logo: 'https://hanuldrone.com/svg/companyLogo.svg',
@@ -35,7 +35,7 @@ const StructuredData = () => {
   const websiteSchema = {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
-    name: siteConfig.company.fullName,
+    name: siteConfig.company.name,
     url: 'https://hanuldrone.com',
     potentialAction: {
       '@type': 'SearchAction',
@@ -54,7 +54,7 @@ const StructuredData = () => {
     description: service.description,
     provider: {
       '@type': 'Organization',
-      name: siteConfig.company.fullName,
+      name: siteConfig.company.name,
     },
     serviceType:
       service.id === 'military'

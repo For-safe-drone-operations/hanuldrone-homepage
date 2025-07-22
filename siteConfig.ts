@@ -1,13 +1,12 @@
 export const siteConfig = {
   company: {
     name: '(주)한울드론',
-    fullName: '(주)한울드론',
     establishedYear: '2022',
     description: '첨단 드론 기술로 다양한 산업 문제를 해결하고 있습니다.',
   },
   sections: {
     hero: {
-      title: ' (주)한울드론',
+      title: '(주)한울드론',
       subtitle:
         "국방 드론 기술로 '생명과 안전'을 지키고,\n지역·민간으로 가치를 확장합니다.",
       description:

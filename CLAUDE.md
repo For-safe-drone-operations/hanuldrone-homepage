@@ -354,6 +354,7 @@ const contactFormSchema = z.object({
 - Follow conventional commit format: `feat:`, `fix:`, `chore:`, etc.
 
 Example of CORRECT commit message:
+
 ```
 feat: 협력 파트너 섹션 추가
 
@@ -401,7 +402,7 @@ feat: 협력 파트너 섹션 추가
 export const siteConfig = {
   company: {
     name: "한울드론",
-    fullName: "(주)한울드론"
+    name: "(주)한울드론"
   },
   sections: {
     hero: { title: "...", subtitle: "..." },
@@ -415,6 +416,7 @@ export const siteConfig = {
 ```
 
 **장점:**
+
 - 모든 텍스트가 한 곳에서 관리됨
 - 컨텐츠 수정 시 코드 변경 없이 config만 수정
 - 타입 안전성 보장
@@ -432,16 +434,19 @@ export const siteConfig = {
 ### Technical Implementation
 
 **Dependencies:**
+
 ```bash
 pnpm add react-hook-form @hookform/resolvers zod resend
 ```
 
 **Core Components:**
+
 - `ContactModal.tsx` - Shadcn Dialog 기반 모달
 - `app/api/contact/route.ts` - Resend API 이메일 전송
 - Form validation with Zod schema
 
 **Form Fields:**
+
 - 이름 (필수)
 - 회사명 (선택)
 - 이메일 (필수)
@@ -459,11 +464,12 @@ const { data, error } = await resend.emails.send({
   to: ['hanuldrone3@hanuldrone.com'],
   subject: `[한울드론 문의] ${name}님의 문의`,
   html: emailContent,
-  replyTo: email
+  replyTo: email,
 })
 ```
 
 **Environment Variables Required:**
+
 ```env
 RESEND_API_KEY=your_resend_api_key
 ```
@@ -491,6 +497,7 @@ export default function RootLayout({ children }) {
 ```
 
 **수집 데이터:**
+
 - 페이지 뷰
 - 사용자 세션
 - 성능 메트릭 (Core Web Vitals)
@@ -524,6 +531,7 @@ return (
 ### Package Management
 
 프로젝트는 **pnpm**을 사용합니다:
+
 ```bash
 # 올바른 방법
 pnpm add package-name
