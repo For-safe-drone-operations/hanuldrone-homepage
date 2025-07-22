@@ -64,13 +64,13 @@ const CompanySection = () => {
         >
           <motion.h2
             variants={titleVariants}
-            className='text-2xl md:text-4xl font-bold text-gray-900 mb-8'
+            className='text-xl sm:text-2xl md:text-4xl font-bold text-gray-900 mb-6 md:mb-8'
           >
             <Text>{siteConfig.sections.company.title}</Text>
           </motion.h2>
           <motion.p
             variants={titleVariants}
-            className='text-base md:text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed'
+            className='text-sm sm:text-base md:text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed'
           >
             <Text>{siteConfig.sections.company.subDescription}</Text>
           </motion.p>
@@ -87,12 +87,12 @@ const CompanySection = () => {
               variants={cardVariants}
               className='lg:col-span-2 bg-gradient-to-br from-blue-50 to-white p-12 rounded-3xl'
             >
-              <h3 className='text-xl md:text-2xl font-bold mb-6 text-blue-900'>
+              <h3 className='text-lg sm:text-xl md:text-2xl font-bold mb-4 md:mb-6 text-blue-900'>
                 <Text>
                   {siteConfig.sections.company.cards.technology.title}
                 </Text>
               </h3>
-              <p className='text-gray-700 text-lg leading-relaxed mb-6'>
+              <p className='text-gray-700 text-sm sm:text-base md:text-lg leading-relaxed mb-4 md:mb-6'>
                 <Text>
                   {siteConfig.sections.company.cards.technology.description}
                 </Text>
@@ -101,10 +101,10 @@ const CompanySection = () => {
                 <div className='divide-y divide-gray-200'>
                   {siteConfig.sections.company.companyInfo.map((item) => (
                     <div key={item.label} className='p-4 flex gap-4'>
-                      <div className='w-20 text-sm font-semibold text-gray-700 shrink-0'>
+                      <div className='w-16 sm:w-20 text-xs sm:text-sm font-semibold text-gray-700 shrink-0'>
                         <Text>{item.label}</Text>
                       </div>
-                      <div className='text-sm text-gray-600 leading-relaxed'>
+                      <div className='text-xs sm:text-sm text-gray-600 leading-relaxed'>
                         <Text>{item.value}</Text>
                       </div>
                     </div>
@@ -117,12 +117,12 @@ const CompanySection = () => {
               variants={rightCardVariants}
               className='bg-gradient-to-br from-gray-900 to-gray-700 p-8 rounded-3xl text-white'
             >
-              <h3 className='text-2xl md:text-3xl font-bold mb-6'>
+              <h3 className='text-lg sm:text-xl md:text-3xl font-bold mb-4 md:mb-6'>
                 <Text>
                   {siteConfig.sections.company.cards.professionals.title}
                 </Text>
               </h3>
-              <p className='text-gray-200 text-lg leading-relaxed mb-8'>
+              <p className='text-gray-200 text-sm sm:text-base md:text-lg leading-relaxed mb-6 md:mb-8'>
                 <Text>
                   {siteConfig.sections.company.cards.professionals.description}
                 </Text>
@@ -131,7 +131,7 @@ const CompanySection = () => {
                 {siteConfig.sections.company.expertise.map((skill) => (
                   <div key={skill} className='flex items-center gap-3'>
                     <div className='w-2 h-2 bg-blue-400 rounded-full'></div>
-                    <Text className='text-base'>{skill}</Text>
+                    <Text className='text-sm sm:text-base'>{skill}</Text>
                   </div>
                 ))}
               </div>
@@ -144,7 +144,7 @@ const CompanySection = () => {
             animate={isInView ? 'visible' : 'hidden'}
             className='bg-white border border-gray-200 p-8 rounded-2xl text-center'
           >
-            <p className='text-gray-600 text-lg'>
+            <p className='text-gray-600 text-sm sm:text-base md:text-lg'>
               <Text>{siteConfig.sections.company.quote}</Text>
             </p>
           </motion.div>

@@ -23,17 +23,17 @@ const ServiceCard = ({ service }: ServiceCardProps) => {
     >
       <div className="flex items-center mb-6">
         <span className="text-3xl md:text-4xl mr-4">{service.icon}</span>
-        <h3 className="text-xl md:text-2xl font-bold text-gray-900">
+        <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-900">
           <Text>{service.title}</Text>
         </h3>
       </div>
       
-      <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+      <p className="text-sm sm:text-base md:text-lg text-gray-600 mb-6 md:mb-8 leading-relaxed">
         <Text>{service.description}</Text>
       </p>
       
       <div className="space-y-3">
-        <h4 className="text-lg font-semibold text-gray-800 mb-3">
+        <h4 className="text-base md:text-lg font-semibold text-gray-800 mb-3">
           <Text>{siteConfig.sections.services.featuresTitle}</Text>
         </h4>
         {service.features.map((feature, index) => (
@@ -57,7 +57,7 @@ const ServiceCard = ({ service }: ServiceCardProps) => {
                 d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" 
               />
             </svg>
-            <Text className="text-gray-700">{feature}</Text>
+            <Text className="text-gray-700 text-sm sm:text-base">{feature}</Text>
           </motion.div>
         ))}
       </div>

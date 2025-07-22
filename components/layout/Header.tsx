@@ -20,34 +20,34 @@ const Header = () => {
           </Link>
 
           {/* 네비게이션 */}
-          <nav className="hidden md:flex items-center space-x-8">
+          <nav className="hidden md:flex items-center space-x-6 lg:space-x-8">
             <a 
               href="#company" 
-              className="text-gray-700 hover:text-blue-600 transition-colors duration-200"
+              className="text-gray-700 hover:text-blue-600 transition-colors duration-200 text-sm lg:text-base"
             >
               회사소개
             </a>
             <a 
               href="#vision" 
-              className="text-gray-700 hover:text-blue-600 transition-colors duration-200"
+              className="text-gray-700 hover:text-blue-600 transition-colors duration-200 text-sm lg:text-base"
             >
               비전&미션
             </a>
             <a 
               href="#values" 
-              className="text-gray-700 hover:text-blue-600 transition-colors duration-200"
+              className="text-gray-700 hover:text-blue-600 transition-colors duration-200 text-sm lg:text-base"
             >
               핵심가치
             </a>
             <a 
               href="#history" 
-              className="text-gray-700 hover:text-blue-600 transition-colors duration-200"
+              className="text-gray-700 hover:text-blue-600 transition-colors duration-200 text-sm lg:text-base"
             >
               연혁
             </a>
             <a 
               href="#solutions" 
-              className="text-gray-700 hover:text-blue-600 transition-colors duration-200"
+              className="text-gray-700 hover:text-blue-600 transition-colors duration-200 text-sm lg:text-base"
             >
               핵심서비스
             </a>
@@ -56,7 +56,7 @@ const Header = () => {
           {/* 문의 버튼 */}
           <div className="flex items-center">
             <ContactModal>
-              <button className="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition-colors duration-200">
+              <button className="bg-blue-600 text-white px-4 sm:px-6 py-2 rounded-full hover:bg-blue-700 transition-colors duration-200 text-sm lg:text-base">
                 문의하기
               </button>
             </ContactModal>

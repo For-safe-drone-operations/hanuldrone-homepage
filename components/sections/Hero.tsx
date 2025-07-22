@@ -14,13 +14,19 @@ const Hero = () => {
       <div className='absolute inset-0'>
         {mounted && (
           <video
-            className='w-full h-full object-cover'
+            className='w-full h-full object-cover min-w-full min-h-full'
             autoPlay
             loop
             muted
             playsInline
             poster='/image/hero-poster.jpg'
             preload='metadata'
+            style={{
+              width: '100vw',
+              height: '100vh',
+              objectFit: 'cover',
+              objectPosition: 'center center'
+            }}
           >
             <source
               src='/video/CES_HanulDrone_homepage_muted.webm'
@@ -38,18 +44,18 @@ const Hero = () => {
       <div className='relative z-10 min-h-screen flex items-end justify-start'>
         <div className='container mx-auto px-4'>
           {/* Main Title */}
-          <div className='text-left mb-40 ml-4'>
-            <div className='mb-8'>
-              <div className='mb-4'>
+          <div className='text-left mb-20 md:mb-40 ml-2 md:ml-4'>
+            <div className='mb-6 md:mb-8'>
+              <div className='mb-3 md:mb-4'>
                 <div className='inline-block -px-1 -py-0.5 rounded-lg'>
-                  <h1 className='text-5xl md:text-7xl font-bold text-white leading-tight text-left'>
+                  <h1 className='text-3xl sm:text-4xl md:text-7xl font-bold text-white leading-tight text-left'>
                     <Text>{siteConfig.company.name}</Text>
                   </h1>
                 </div>
               </div>
-              <div className='mb-8'>
+              <div className='mb-6 md:mb-8'>
                 <div className='inline-block -px-1 -py-0.5 rounded-lg'>
-                  <Text className='text-3xl md:text-4xl text-white/90 font-light text-left' as='div'>
+                  <Text className='text-lg sm:text-xl md:text-4xl text-white/90 font-light text-left' as='div'>
                     {siteConfig.sections.hero.subtitle}
                   </Text>
                 </div>

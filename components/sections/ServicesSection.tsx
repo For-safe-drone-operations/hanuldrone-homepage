@@ -54,13 +54,13 @@ const ServicesSection = () => {
         >
           <motion.h2 
             variants={titleVariants}
-            className="text-2xl md:text-4xl font-bold text-gray-900 mb-6"
+            className="text-xl sm:text-2xl md:text-4xl font-bold text-gray-900 mb-4 md:mb-6"
           >
             <Text>{siteConfig.sections.services.title}</Text>
           </motion.h2>
           <motion.p 
             variants={titleVariants}
-            className="text-base md:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed"
+            className="text-sm sm:text-base md:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed"
           >
             <Text>{siteConfig.sections.services.description}</Text>
           </motion.p>

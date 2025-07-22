@@ -53,13 +53,13 @@ const HistorySection = () => {
         >
           <motion.h2 
             variants={titleVariants}
-            className="text-2xl md:text-4xl font-bold text-gray-900 mb-6"
+            className="text-xl sm:text-2xl md:text-4xl font-bold text-gray-900 mb-4 md:mb-6"
           >
             <Text>{siteConfig.sections.history.title}</Text>
           </motion.h2>
           <motion.p 
             variants={titleVariants}
-            className="text-gray-600"
+            className="text-gray-600 text-sm sm:text-base"
           >
             <Text>{siteConfig.sections.history.description}</Text>
           </motion.p>
@@ -78,12 +78,12 @@ const HistorySection = () => {
                 variants={yearVariants}
                 className="border-l-4 border-blue-600 pl-6"
               >
-                <h3 className="text-2xl font-bold mb-4 text-blue-600">
+                <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-3 md:mb-4 text-blue-600">
                   {yearData.year}
                 </h3>
                 <ul className="space-y-2">
                   {yearData.items.map((item, index) => (
-                    <li key={index} className="text-gray-700">
+                    <li key={index} className="text-gray-700 text-sm sm:text-base">
                       • {item.isBold ? (
                         <Text as="span" className="font-bold">{item.text}</Text>
                       ) : (

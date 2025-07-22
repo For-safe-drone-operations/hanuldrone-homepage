@@ -50,7 +50,7 @@ export async function POST(request: NextRequest) {
 
     // Resend를 통해 이메일 전송
     const { data, error } = await resend.emails.send({
-      from: 'hanuldrone@hanuldrone.com', // Resend에서 인증된 도메인 사용
+      from: 'notify@hanuldrone.com', // Resend에서 인증된 도메인 사용
       // to: ['hanuldrone3@hanuldrone.com'], // 실제 수신 이메일
       to: ['hanuldrone3@hanuldrone.com', 'kyc4421194@gmail.com'], // 실제 수신 이메일
       subject: `[한울드론 문의] ${name}님의 문의`,

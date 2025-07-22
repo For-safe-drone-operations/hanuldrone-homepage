@@ -65,13 +65,13 @@ const ValuesSection = () => {
         >
           <motion.h2
             variants={titleVariants}
-            className='text-2xl md:text-4xl font-bold text-gray-900 mb-6'
+            className='text-xl sm:text-2xl md:text-4xl font-bold text-gray-900 mb-4 md:mb-6'
           >
             <Text>{siteConfig.sections.values.title}</Text>
           </motion.h2>
           <motion.p
             variants={titleVariants}
-            className='text-base md:text-lg text-gray-600 max-w-3xl mx-auto'
+            className='text-sm sm:text-base md:text-lg text-gray-600 max-w-3xl mx-auto'
           >
             <Text>{siteConfig.sections.values.description}</Text>
           </motion.p>
@@ -92,11 +92,11 @@ const ValuesSection = () => {
               <div className='flex-1 max-w-lg'>
                 <div className='bg-gray-50 p-6 rounded-xl border-l-4 border-blue-600'>
                   <div className='flex items-center gap-3 mb-3'>
-                    <h3 className='text-lg md:text-xl font-bold text-gray-900'>
+                    <h3 className='text-base sm:text-lg md:text-xl font-bold text-gray-900'>
                       <Text>{value.title}</Text>
                     </h3>
                   </div>
-                  <p className='text-gray-600 leading-relaxed'>
+                  <p className='text-gray-600 leading-relaxed text-sm sm:text-base'>
                     <Text>{value.description}</Text>
                   </p>
                 </div>
