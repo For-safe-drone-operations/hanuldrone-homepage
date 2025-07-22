@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import { siteConfig } from '../../siteConfig'
+import Text from '@/components/ui/Text'
 
 const Footer = () => {
   const currentYear = new Date().getFullYear()
@@ -29,12 +30,12 @@ const Footer = () => {
           <div className='flex flex-col gap-1'>
             {companyInfo.map((info) => (
               <div key={info.id} className={textStyles}>
-                {info.text}
+                <Text>{info.text}</Text>
               </div>
             ))}
           </div>
           <div className={copyrightStyles}>
-ⓒ 2023-{currentYear} 한울드론. All Rights Reserved.
+            <Text>ⓒ 2023-{currentYear} 한울드론. All Rights Reserved.</Text>
           </div>
         </div>
       </div>

@@ -4,6 +4,7 @@ import { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
 import ServiceCard from './ServiceCard'
 import { siteConfig } from '../../siteConfig'
+import Text from '@/components/ui/Text'
 
 const ServicesSection = () => {
   const ref = useRef(null)
@@ -55,13 +56,13 @@ const ServicesSection = () => {
             variants={titleVariants}
             className="text-2xl md:text-4xl font-bold text-gray-900 mb-6"
           >
-            {siteConfig.sections.services.title}
+            <Text>{siteConfig.sections.services.title}</Text>
           </motion.h2>
           <motion.p 
             variants={titleVariants}
             className="text-base md:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed"
           >
-            {siteConfig.sections.services.description}
+            <Text>{siteConfig.sections.services.description}</Text>
           </motion.p>
         </motion.div>
 

@@ -26,6 +26,7 @@ import {
   SelectValue,
 } from "@/components/ui/select"
 import { siteConfig } from '../../siteConfig'
+import Text from '@/components/ui/Text'
 
 // Zod 스키마 정의
 const contactFormSchema = z.object({
@@ -99,9 +100,9 @@ const ContactModal = ({ children }: ContactModalProps) => {
       <DialogContent className="sm:max-w-[500px] max-h-[90vh] overflow-y-auto bg-white/95 backdrop-blur-md">
         <form onSubmit={handleSubmit(onSubmit)}>
           <DialogHeader>
-            <DialogTitle>{siteConfig.sections.contact.modal.title}</DialogTitle>
+            <DialogTitle><Text>{siteConfig.sections.contact.modal.title}</Text></DialogTitle>
             <DialogDescription>
-              {siteConfig.sections.contact.modal.description}
+              <Text>{siteConfig.sections.contact.modal.description}</Text>
             </DialogDescription>
           </DialogHeader>
 
@@ -113,10 +114,10 @@ const ContactModal = ({ children }: ContactModalProps) => {
                 </svg>
               </div>
               <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                {siteConfig.sections.contact.form.messages.success.title}
+                <Text>{siteConfig.sections.contact.form.messages.success.title}</Text>
               </h3>
               <p className="text-gray-600">
-                {siteConfig.sections.contact.form.messages.success.description}
+                <Text>{siteConfig.sections.contact.form.messages.success.description}</Text>
               </p>
             </div>
           ) : (
@@ -124,7 +125,7 @@ const ContactModal = ({ children }: ContactModalProps) => {
               {/* 이름 */}
               <div className="grid gap-2">
                 <Label htmlFor="name">
-                  {siteConfig.sections.contact.form.fields.name.label}
+                  <Text>{siteConfig.sections.contact.form.fields.name.label}</Text>
                   <span className="text-red-500 ml-1">*</span>
                 </Label>
                 <Input
@@ -140,7 +141,7 @@ const ContactModal = ({ children }: ContactModalProps) => {
               {/* 회사명 */}
               <div className="grid gap-2">
                 <Label htmlFor="company">
-                  {siteConfig.sections.contact.form.fields.company.label}
+                  <Text>{siteConfig.sections.contact.form.fields.company.label}</Text>
                 </Label>
                 <Input
                   id="company"
@@ -152,7 +153,7 @@ const ContactModal = ({ children }: ContactModalProps) => {
               {/* 이메일 */}
               <div className="grid gap-2">
                 <Label htmlFor="email">
-                  {siteConfig.sections.contact.form.fields.email.label}
+                  <Text>{siteConfig.sections.contact.form.fields.email.label}</Text>
                   <span className="text-red-500 ml-1">*</span>
                 </Label>
                 <Input
@@ -169,7 +170,7 @@ const ContactModal = ({ children }: ContactModalProps) => {
               {/* 연락처 */}
               <div className="grid gap-2">
                 <Label htmlFor="phone">
-                  {siteConfig.sections.contact.form.fields.phone.label}
+                  <Text>{siteConfig.sections.contact.form.fields.phone.label}</Text>
                 </Label>
                 <Input
                   id="phone"
@@ -183,7 +184,7 @@ const ContactModal = ({ children }: ContactModalProps) => {
               {/* 문의 내용 */}
               <div className="grid gap-2">
                 <Label htmlFor="message">
-                  {siteConfig.sections.contact.form.fields.message.label}
+                  <Text>{siteConfig.sections.contact.form.fields.message.label}</Text>
                   <span className="text-red-500 ml-1">*</span>
                 </Label>
                 <Textarea
@@ -201,7 +202,7 @@ const ContactModal = ({ children }: ContactModalProps) => {
               {submitStatus === 'error' && (
                 <div className="bg-red-50 border border-red-200 rounded-lg p-3">
                   <p className="text-red-800 text-sm">
-                    {siteConfig.sections.contact.form.messages.error.description}
+                    <Text>{siteConfig.sections.contact.form.messages.error.description}</Text>
                   </p>
                 </div>
               )}
@@ -211,17 +212,19 @@ const ContactModal = ({ children }: ContactModalProps) => {
           <DialogFooter>
             <DialogClose asChild>
               <Button variant="outline" disabled={isSubmitting}>
-                {siteConfig.sections.contact.form.buttons.cancel}
+                <Text>{siteConfig.sections.contact.form.buttons.cancel}</Text>
               </Button>
             </DialogClose>
             <Button 
               type="submit" 
               disabled={isSubmitting || submitStatus === 'success'}
             >
-              {isSubmitting 
-                ? siteConfig.sections.contact.form.buttons.submitting
-                : siteConfig.sections.contact.form.buttons.submit
-              }
+              <Text>
+                {isSubmitting 
+                  ? siteConfig.sections.contact.form.buttons.submitting
+                  : siteConfig.sections.contact.form.buttons.submit
+                }
+              </Text>
             </Button>
           </DialogFooter>
         </form>

@@ -4,6 +4,7 @@ import { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
 import Image from 'next/image'
 import { siteConfig } from '../../siteConfig'
+import Text from '@/components/ui/Text'
 
 const ValuesSection = () => {
   const ref = useRef(null)
@@ -66,13 +67,13 @@ const ValuesSection = () => {
             variants={titleVariants}
             className='text-2xl md:text-4xl font-bold text-gray-900 mb-6'
           >
-            {siteConfig.sections.values.title}
+            <Text>{siteConfig.sections.values.title}</Text>
           </motion.h2>
           <motion.p
             variants={titleVariants}
             className='text-base md:text-lg text-gray-600 max-w-3xl mx-auto'
           >
-            {siteConfig.sections.values.description}
+            <Text>{siteConfig.sections.values.description}</Text>
           </motion.p>
         </motion.div>
 
@@ -92,11 +93,11 @@ const ValuesSection = () => {
                 <div className='bg-gray-50 p-6 rounded-xl border-l-4 border-blue-600'>
                   <div className='flex items-center gap-3 mb-3'>
                     <h3 className='text-lg md:text-xl font-bold text-gray-900'>
-                      {value.title}
+                      <Text>{value.title}</Text>
                     </h3>
                   </div>
                   <p className='text-gray-600 leading-relaxed'>
-                    {value.description}
+                    <Text>{value.description}</Text>
                   </p>
                 </div>
               </div>

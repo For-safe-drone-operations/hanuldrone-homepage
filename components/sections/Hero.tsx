@@ -1,5 +1,6 @@
 import { siteConfig } from '../../siteConfig'
 import { useEffect, useState } from 'react'
+import Text from '@/components/ui/Text'
 
 const Hero = () => {
   const [mounted, setMounted] = useState(false)
@@ -42,25 +43,15 @@ const Hero = () => {
               <div className='mb-4'>
                 <div className='inline-block -px-1 -py-0.5 rounded-lg'>
                   <h1 className='text-5xl md:text-7xl font-bold text-white leading-tight text-left'>
-                    {siteConfig.company.name}
+                    <Text>{siteConfig.company.name}</Text>
                   </h1>
                 </div>
               </div>
               <div className='mb-8'>
                 <div className='inline-block -px-1 -py-0.5 rounded-lg'>
-                  <div className='text-3xl md:text-4xl text-white/90 font-light text-left'>
-                    {siteConfig.sections.hero.subtitle
-                      .split('\n')
-                      .map((line, index) => (
-                        <span key={line}>
-                          {line}
-                          {index <
-                            siteConfig.sections.hero.subtitle.split('\n')
-                              .length -
-                              1 && <br />}
-                        </span>
-                      ))}
-                  </div>
+                  <Text className='text-3xl md:text-4xl text-white/90 font-light text-left' as='div'>
+                    {siteConfig.sections.hero.subtitle}
+                  </Text>
                 </div>
               </div>
             </div>
@@ -71,7 +62,7 @@ const Hero = () => {
       {/* Scroll Indicator */}
       <div className='absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white/60 animate-bounce drop-shadow-lg'>
         <div className='flex flex-col items-center'>
-          <span className='text-sm mb-2'>스크롤</span>
+          <span className='text-sm mb-2'><Text>스크롤</Text></span>
           <div className='w-6 h-10 border-2 border-white/40 rounded-full flex justify-center'>
             <div className='w-1 h-3 bg-white/40 rounded-full mt-2 animate-pulse'></div>
           </div>

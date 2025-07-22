@@ -3,6 +3,7 @@
 import { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
 import { siteConfig } from '../../siteConfig'
+import Text from '@/components/ui/Text'
 
 const HistorySection = () => {
   const ref = useRef(null)
@@ -54,13 +55,13 @@ const HistorySection = () => {
             variants={titleVariants}
             className="text-2xl md:text-4xl font-bold text-gray-900 mb-6"
           >
-            {siteConfig.sections.history.title}
+            <Text>{siteConfig.sections.history.title}</Text>
           </motion.h2>
           <motion.p 
             variants={titleVariants}
             className="text-gray-600"
           >
-            {siteConfig.sections.history.description}
+            <Text>{siteConfig.sections.history.description}</Text>
           </motion.p>
         </motion.div>
         
@@ -84,9 +85,9 @@ const HistorySection = () => {
                   {yearData.items.map((item, index) => (
                     <li key={index} className="text-gray-700">
                       • {item.isBold ? (
-                        <span className="font-bold">{item.text}</span>
+                        <Text as="span" className="font-bold">{item.text}</Text>
                       ) : (
-                        item.text
+                        <Text>{item.text}</Text>
                       )}
                     </li>
                   ))}
