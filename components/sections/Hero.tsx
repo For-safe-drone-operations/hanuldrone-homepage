@@ -34,21 +34,26 @@ const Hero = () => {
           <div className='text-left mb-40 ml-4'>
             <div className='mb-8'>
               <div className='mb-4'>
-                <div className='inline-block -px-1 -py-0.5 rounded-lg backdrop-blur-sm bg-black/5'>
+                <div className='inline-block -px-1 -py-0.5 rounded-lg'>
                   <h1 className='text-5xl md:text-7xl font-bold text-white leading-tight text-left'>
                     {siteConfig.company.name}
                   </h1>
                 </div>
               </div>
               <div className='mb-8'>
-                <div className='inline-block -px-1 -py-0.5 rounded-lg backdrop-blur-sm bg-black/3'>
+                <div className='inline-block -px-1 -py-0.5 rounded-lg'>
                   <div className='text-3xl md:text-4xl text-white/90 font-light text-left'>
-                    {siteConfig.sections.hero.subtitle.split('\n').map((line, index) => (
-                      <span key={index}>
-                        {line}
-                        {index < siteConfig.sections.hero.subtitle.split('\n').length - 1 && <br/>}
-                      </span>
-                    ))}
+                    {siteConfig.sections.hero.subtitle
+                      .split('\n')
+                      .map((line, index) => (
+                        <span key={line}>
+                          {line}
+                          {index <
+                            siteConfig.sections.hero.subtitle.split('\n')
+                              .length -
+                              1 && <br />}
+                        </span>
+                      ))}
                   </div>
                 </div>
               </div>
