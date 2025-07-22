@@ -55,6 +55,42 @@ export const siteConfig = {
       quote:
         '하늘을 열어 사회적 불균형을 해소한다(Unlock the Sky)\n우리는 기술-신뢰-사회를 잇는 드론 파트너가 되겠습니다.',
     },
+    vision: {
+      title: '비전 및 미션',
+      description: '한울드론이 추구하는 가치와 목표를 소개합니다.',
+      vision: {
+        title: 'VISION',
+        description:
+          '국방 드론 기술로 ‘생명과 안전’을 지키고,\n지역·민간으로 가치를 확장합니다.',
+        features: [
+          {
+            title: '국방 우선',
+            description:
+              '전 · 평시 전천후 수색 · 타격 능력으로 장병 생존성 향상',
+          },
+          {
+            title: '지역 상생',
+            description:
+              '도서·산간 응급 물류 및 재난 대응에 같은 플랫폼을 재활용 지속·가능',
+          },
+        ],
+      },
+      mission: {
+        title: 'MISSION',
+        description:
+          '첨단 무인기 기술로 국방력을 강화함과 동시에\n해당 기술을 재난 대응 및 공공 안전 분야에 응용하여 국민의 안전을 지키는 것',
+        features: [
+          {
+            title: '자율비행 기반 솔루션',
+            description: '한울드론만의 개발 중인 핵심 기술 집중',
+          },
+          {
+            title: '국방 안보',
+            description: '방산 전문의 전략적 방향 반영',
+          },
+        ],
+      },
+    },
     history: {
       title: '주요 연혁',
       description: '한울드론의 성장 과정과 주요 이정표를 소개합니다.',
@@ -125,38 +161,6 @@ export const siteConfig = {
           image: '/image/value-4.png',
         },
       ],
-    },
-    vision: {
-      title: '비전 및 미션',
-      description: '한울드론이 추구하는 가치와 목표를 소개합니다.',
-      vision: {
-        title: 'VISION',
-        content:
-          '국방 드론 기술로 ‘생명과 안전’을 지키고,\n지역·민간으로 가치를 확장합니다.',
-        features: [
-          {
-            title: '국방 우선',
-            description:
-              '전 · 평시 전천후 수색 · 타격 능력으로 장병 생존성 향상',
-          },
-          {
-            title: '지역 상생',
-            description:
-              '도서·산간 응급 물류 및 재난 대응에 같은 플랫폼을 재활용 지속·가능',
-          },
-        ],
-      },
-      mission: {
-        title: 'MISSION',
-        content:
-          '첨단 무인기 기술로 국방력을 강화함과 동시에\n해당 기술을 재난 대응 및 공공 안전 분야에 응용하여 국민의 안전을 지키는 것',
-        features: [
-          {
-            title:
-              '국방 기술을 통해 군사적 임무와 시민의 안전을 모두 지원하는 이중적 사명을 수행하고 있습니다.',
-          },
-        ],
-      },
     },
     services: {
       title: '핵심 서비스',
