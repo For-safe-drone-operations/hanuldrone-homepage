@@ -7,7 +7,7 @@ export const siteConfig = {
   },
   sections: {
     hero: {
-      title: '(주)한울드론',
+      title: ' (주)한울드론',
       subtitle:
         '국방 드론 기술로 ‘생명과 안전’을 지키고,\n지역·민간으로 가치를 확장합니다.',
       description:
