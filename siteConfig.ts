@@ -1,6 +1,6 @@
 export const siteConfig = {
   company: {
-    name: '한울드론',
+    name: '(주)한울드론',
     fullName: '(주)한울드론',
     establishedYear: '2022',
     description: '첨단 드론 기술로 다양한 산업 문제를 해결하고 있습니다.',
