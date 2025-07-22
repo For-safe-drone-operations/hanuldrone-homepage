@@ -29,6 +29,9 @@ The site focuses on clear service/solution presentation, easy administrator main
 - **Framework**: Next.js 15 (App Router)
 - **Frontend**: React 19, TypeScript
 - **Styling**: TailwindCSS 3, Shadcn UI
+- **Form Handling**: React Hook Form + Zod validation
+- **Email Service**: Resend API
+- **Analytics**: Vercel Analytics
 - **Utilities**: usehooks-ts, date-fns, zod
 - **Development**: Biome v2 (formatting/linting)
 - **Testing**: Jest (unit testing)
@@ -386,3 +389,145 @@ feat: 협력 파트너 섹션 추가
 - 관리자 교육 필요성
 - 컨텐츠 업데이트 워크플로우
 - 모니터링과 분석 도구 설정
+
+## Content Management System
+
+### Site Configuration
+
+모든 사이트 텍스트 컨텐츠는 루트의 `siteConfig.ts`에서 중앙 관리됩니다:
+
+```typescript
+// siteConfig.ts
+export const siteConfig = {
+  company: {
+    name: "한울드론",
+    fullName: "(주)한울드론"
+  },
+  sections: {
+    hero: { title: "...", subtitle: "..." },
+    services: { title: "...", items: [...] },
+    company: { title: "...", achievements: {...} },
+    history: { title: "...", data: [...] },
+    values: { title: "...", items: [...] },
+    contact: { title: "...", form: {...} }
+  }
+}
+```
+
+**장점:**
+- 모든 텍스트가 한 곳에서 관리됨
+- 컨텐츠 수정 시 코드 변경 없이 config만 수정
+- 타입 안전성 보장
+- 다국어 지원 기반 마련
+
+## Contact System
+
+### Modal + Section Hybrid Approach
+
+문의하기 시스템은 두 가지 방식으로 접근 가능:
+
+1. **Header 문의하기 버튼** → Shadcn Dialog 모달 (빠른 문의)
+2. **페이지 하단 Contact Section** → 상세한 문의 폼 (향후 구현)
+
+### Technical Implementation
+
+**Dependencies:**
+```bash
+pnpm add react-hook-form @hookform/resolvers zod resend
+```
+
+**Core Components:**
+- `ContactModal.tsx` - Shadcn Dialog 기반 모달
+- `app/api/contact/route.ts` - Resend API 이메일 전송
+- Form validation with Zod schema
+
+**Form Fields:**
+- 이름 (필수)
+- 회사명 (선택)
+- 이메일 (필수)
+- 연락처 (선택)
+- 문의 내용 (필수, 최소 10자)
+
+### Email Integration
+
+Resend API를 통한 이메일 전송:
+
+```typescript
+// API Route: app/api/contact/route.ts
+const { data, error } = await resend.emails.send({
+  from: 'hanuldrone@hanuldrone.com',
+  to: ['hanuldrone3@hanuldrone.com'],
+  subject: `[한울드론 문의] ${name}님의 문의`,
+  html: emailContent,
+  replyTo: email
+})
+```
+
+**Environment Variables Required:**
+```env
+RESEND_API_KEY=your_resend_api_key
+```
+
+## Analytics Integration
+
+### Vercel Analytics
+
+간단한 설정으로 페이지 뷰 및 사용자 행동 분석:
+
+```typescript
+// app/layout.tsx
+import { Analytics } from '@vercel/analytics/react'
+
+export default function RootLayout({ children }) {
+  return (
+    <html>
+      <body>
+        {children}
+        <Analytics />
+      </body>
+    </html>
+  )
+}
+```
+
+**수집 데이터:**
+- 페이지 뷰
+- 사용자 세션
+- 성능 메트릭 (Core Web Vitals)
+- 지역별 사용자 분포
+
+## Performance Optimizations
+
+### Hydration Issues
+
+Hero 섹션의 video 태그에서 hydration mismatch 해결:
+
+```typescript
+// components/sections/Hero.tsx
+const [mounted, setMounted] = useState(false)
+
+useEffect(() => {
+  setMounted(true)
+}, [])
+
+return (
+  <div>
+    {mounted && (
+      <video autoPlay loop muted playsInline>
+        <source src="/video/..." type="video/mp4" />
+      </video>
+    )}
+  </div>
+)
+```
+
+### Package Management
+
+프로젝트는 **pnpm**을 사용합니다:
+```bash
+# 올바른 방법
+pnpm add package-name
+
+# 잘못된 방법 (사용 금지)
+npm install package-name
+```
