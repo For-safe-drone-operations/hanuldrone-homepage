@@ -18,9 +18,15 @@ const Hero = () => {
             loop
             muted
             playsInline
+            poster='/image/hero-poster.jpg'
+            preload='metadata'
           >
             <source
-              src='/video/CES_HanulDrone_homepage_muted.mp4'
+              src='/video/CES_HanulDrone_homepage_muted.webm'
+              type='video/webm'
+            />
+            <source
+              src='/video/CES_HanulDrone_homepage_muted_optimized.mp4'
               type='video/mp4'
             />
           </video>
