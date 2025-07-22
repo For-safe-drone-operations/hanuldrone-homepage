@@ -7,12 +7,12 @@ import './globals.css'
 
 const siteName = siteConfig.company.name
 const siteDescription =
-  '국방 드론 기술로 생명과 안전을 지키고, 지역·민간으로 가치를 확장하는 첨단 드론 솔루션 전문기업'
+  '국방 드론 기술로 생명과 안전을 지키고, 지역·민간으로 가치를 확장하는 국방·공공 드론 솔루션 솔루션 전문기업'
 const siteUrl = 'https://hanuldrone.com'
 
 export const metadata: Metadata = {
   title: {
-    default: `${siteName} - 첨단 드론 솔루션 전문기업`,
+    default: `${siteName} - 국방·공공 드론 솔루션 전문기업`,
     template: `%s | ${siteName}`,
   },
   description: siteDescription,
