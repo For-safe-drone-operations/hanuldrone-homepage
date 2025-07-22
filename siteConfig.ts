@@ -48,7 +48,7 @@ export const siteConfig = {
     company: {
       title: '회사 소개',
       description:
-        '(주)한울드론은 첨단 드론 기술로 다양한 산업 문제를 해결하고 있습니다.\n우리는 고객 비즈니스의 성장과 발전을 위한 최적 솔루션을 끊임없이 연구·개발합니다.',
+        '(주)한울드론은 **국방·공공 드론 솔루션**을 혁신하는 테크 스타트업입니다.',
       achievements: {
         stat1Value: '60%+',
         stat1Description: '석사 이상 전문 인력',
@@ -145,11 +145,11 @@ export const siteConfig = {
           {
             title: '지능형 드론 기술',
             description:
-              'AI시간 자율비행, 군집비행, 장애물 회피 등 첨단기술을 보유',
+              'AI 기반 자율비행, 군집비행, 장애물 회피 등 첨단기술을 보유',
           },
           {
             title: '사람과 지역사회 연결',
-            description: '도서지역 물류, 재난 대응, 공공안수 등의의 상생',
+            description: '도서지역 물류, 재난 대응, 공공안전 등의의 상생',
           },
         ],
       },
