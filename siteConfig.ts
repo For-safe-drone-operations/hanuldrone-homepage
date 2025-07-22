@@ -197,13 +197,43 @@ export const siteConfig = {
     },
     partners: {
       title: '협력 파트너',
-      description: '한울드론과 함께하는 신뢰할 수 있는 파트너들입니다.',
-      logos: [
-        { name: '한서대학교', file: 'hanseo-university.svg' },
-        { name: '국토교통부', file: 'molit.svg' },
-        { name: '서산시', file: 'seosan-city.svg' },
-        { name: '태안군', file: 'taean-county.svg' },
-        { name: '국방기술진흥연구소', file: 'krit.svg' },
+      description: '한울드론의 미래를 함께 만들고, 성장을 지지하는 든든한 동반자들입니다.',
+      items: [
+        {
+          name: '한서대학교',
+          englishName: 'hanseo-university',
+          src: '/image/logo-hanseo-university.jpg',
+          width: 125,
+          height: 45,
+        },
+        {
+          name: '국토교통부',
+          englishName: 'ministry-of-land',
+          src: '/image/logo-ministry-of-land.jpg',
+          width: 145,
+          height: 55,
+        },
+        {
+          name: '서산시',
+          englishName: 'seosan',
+          src: '/image/logo-seosan.png',
+          width: 140,
+          height: 50,
+        },
+        {
+          name: '태안군',
+          englishName: 'taean',
+          src: '/image/logo-taean.jpg',
+          width: 100,
+          height: 42,
+        },
+        {
+          name: '국방기술진흥연구소',
+          englishName: 'krit',
+          src: '/image/logo-krit.jpg',
+          width: 240,
+          height: 95,
+        },
       ],
     },
     contact: {

@@ -218,7 +218,7 @@ const ContactModal = ({ children }: ContactModalProps) => {
             <Button 
               type="submit" 
               disabled={isSubmitting || submitStatus === 'success'}
-              className="text-sm md:text-base px-4 py-2"
+              className="text-sm md:text-base px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white"
             >
               <Text>
                 {isSubmitting 
