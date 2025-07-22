@@ -7,9 +7,9 @@ export const siteConfig = {
   },
   sections: {
     hero: {
-      title: '한울드론',
+      title: '(주)한울드론',
       subtitle:
-        'AI 기반 실시간 분석으로\n미래 드론의 안전과 효율을 선도합니다.',
+        '국방 드론 기술로 ‘생명과 안전’을 지키고,\n지역·민간으로 가치를 확장합니다.',
       description:
         '첨단 드론 기술로 물류, 검사, 감시 등 다양한 분야의 혁신을 이끌어갑니다.',
     },
