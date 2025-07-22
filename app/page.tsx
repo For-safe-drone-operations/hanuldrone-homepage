@@ -21,17 +21,8 @@ export default function Home() {
         <Hero />
 
 
-        {/* Solutions Section */}
-        <ServicesSection />
-
         {/* Company Section */}
         <CompanySection />
-
-        {/* History Section */}
-        <HistorySection />
-
-        {/* Core Values Section */}
-        <ValuesSection />
 
         {/* Vision & Mission Section */}
         <section id="vision" className="py-20 bg-gray-50">
@@ -85,6 +76,15 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        {/* Core Values Section */}
+        <ValuesSection />
+
+        {/* History Section */}
+        <HistorySection />
+
+        {/* Solutions Section */}
+        <ServicesSection />
 
 
         {/* Partners Section */}

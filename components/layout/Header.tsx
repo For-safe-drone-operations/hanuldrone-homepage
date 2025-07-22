@@ -22,22 +22,16 @@ const Header = () => {
           {/* 네비게이션 */}
           <nav className="hidden md:flex items-center space-x-8">
             <a 
-              href="#solutions" 
-              className="text-gray-700 hover:text-blue-600 transition-colors duration-200"
-            >
-              핵심서비스
-            </a>
-            <a 
               href="#company" 
               className="text-gray-700 hover:text-blue-600 transition-colors duration-200"
             >
               회사소개
             </a>
             <a 
-              href="#history" 
+              href="#vision" 
               className="text-gray-700 hover:text-blue-600 transition-colors duration-200"
             >
-              연혁
+              비전&미션
             </a>
             <a 
               href="#values" 
@@ -46,10 +40,16 @@ const Header = () => {
               핵심가치
             </a>
             <a 
-              href="#vision" 
+              href="#history" 
               className="text-gray-700 hover:text-blue-600 transition-colors duration-200"
             >
-              비전&미션
+              연혁
+            </a>
+            <a 
+              href="#solutions" 
+              className="text-gray-700 hover:text-blue-600 transition-colors duration-200"
+            >
+              핵심서비스
             </a>
           </nav>
 
