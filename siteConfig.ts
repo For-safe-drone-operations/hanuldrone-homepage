@@ -78,7 +78,7 @@ export const siteConfig = {
       mission: {
         title: 'MISSION',
         description:
-          '국방 분야에서 검증된 첨단 드론 기술을 공공 안전과 사회 편익으로 확장하여, 모두가 안전하고 편리한 삶을 누릴 수 있도록 기여한다.',
+          '국방 분야에서 검증된 첨단 드론 기술을 공공 안전과 사회 편익으로 확장하여,\n모두가 안전하고 편리한 삶을 누릴 수 있도록 기여한다.',
         features: [
           {
             title: '국방 임무 혁신',
@@ -97,36 +97,53 @@ export const siteConfig = {
       data: [
         {
           year: '2022',
-          items: [{ text: '(주) 한울드론 법인 설립', isBold: true }],
+          items: [{ text: 12. '(주) 한울드론 법인 설립', isBold: true }],
         },
         {
           year: '2023',
           items: [
             {
-              text: '청년창업사관학교 기업 선정 (중소벤처기업부 주관)',
+              text: '03. 청년창업사관학교 기업 선정 (중소벤처기업부 주관)',
               isBold: false,
             },
             {
-              text: '드론 실증도시 구축 사업 VTOL 의약품 배송 분야 사업자 선정',
+              text: '04. 드론 실증도시 구축 사업 VTOL 의약품 배송 분야 사업자 선정 (서산시 컨소시엄, 국토교통부 주관)',
               isBold: false,
             },
-            { text: '기업부설 연구소 등록', isBold: true },
-            { text: '벤처기업 인증', isBold: true },
+            {
+              text: '04. 드론 실증도시 구축 사업 화재 초기감시 및 진압 분야 선정 (태안군 컨소시엄, 국토교통부 주관)',
+              isBold: false,
+            },
+            { text: '05. 기업부설 연구소 등록', isBold: true },
+            { text: '12. 벤처기업 인증', isBold: true },
           ],
         },
         {
           year: '2024',
           items: [
             {
-              text: '드론 실증도시 구축사업 물품 배송 분야 사업자 선정',
+              text: '03. 드론 실증도시 구축사업 물품 배송 분야 사업자 선정 (서산시 컨소시엄, 국토교통부 주관)',
               isBold: false,
             },
             {
-              text: '디지털 물류서비스 실증 사업 VTOL 의약품 배송 분야 사업자 선정',
+              text: '03. 디지털 물류서비스 실증 사업 VTOL 의약품 배송 분야 사업자 선정 (서산시 컨소시엄, 국토교통부 주관)',
               isBold: false,
             },
-            { text: '연구개발기업 인증', isBold: true },
-            { text: '육해공 무인이동체 챌린지 우수상 수상', isBold: false },
+            { text: '04. 국방벤처기업 인증', isBold: true },
+            { text: '06. 육해공 무인이동체 챌린지 우수상 수상', isBold: false },
+          ],
+        },
+        {
+          year: '2025',
+          items: [
+            {
+              text: '03. 드론 실증도시 구축사업 물품 배송 분야 사업자 선정 (보령시 컨소시엄, 국토교통부 주관)',
+              isBold: false,
+            },
+            {
+              text: '03. 드론 실증도시 구축사업 물품 배송 분야 사업자 선정 (서산시 컨소시엄, 국토교통부 주관)',
+              isBold: false,
+            },
           ],
         },
       ],
