@@ -3,7 +3,6 @@
 import Header from '@/components/layout/Header'
 import Footer from '@/components/layout/Footer'
 import Hero from '@/components/sections/Hero'
-import PartnersSection from '@/components/sections/PartnersSection'
 import ServicesSection from '@/components/sections/ServicesSection'
 import CompanySection from '@/components/sections/CompanySection'
 import VisionSection from '@/components/sections/VisionSection'
@@ -22,7 +21,6 @@ export default function Home() {
         <ValuesSection />
         <HistorySection />
         <ServicesSection />
-        <PartnersSection />
       </main>
 
       <Footer />
