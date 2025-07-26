@@ -11,6 +11,7 @@ const siteDescription =
 const siteUrl = 'https://hanuldrone.com'
 
 export const metadata: Metadata = {
+  applicationName: siteName,
   title: {
     default: `${siteName} - 국방·공공 드론 솔루션 전문기업`,
     template: `%s | ${siteName}`,
