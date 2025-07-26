@@ -82,11 +82,13 @@ export const siteConfig = {
         features: [
           {
             title: '국방 임무 혁신',
-            description: '군집 비행과 고정밀 센서 융합 기술을 활용한 실시간 수색·정찰 및 신속 대응 지원',
+            description:
+              '군집 비행과 고정밀 센서 융합 기술을 활용한 실시간 수색·정찰 및 신속 대응 지원',
           },
           {
             title: '공공 물류 및 안전 혁신',
-            description: '국방 현장에서 검증된 기술을 기반으로 도서·산간 지역의 생활물류 접근성 개선 및 긴급 재난·응급 물자 신속 배송',
+            description:
+              '국방 현장에서 검증된 기술을 기반으로 도서·산간 지역의 생활물류 접근성 개선 및 긴급 재난·응급 물자 신속 배송',
           },
         ],
       },
@@ -97,7 +99,7 @@ export const siteConfig = {
       data: [
         {
           year: '2022',
-          items: [{ text: 12. '(주) 한울드론 법인 설립', isBold: true }],
+          items: [{ text: '12. (주) 한울드론 법인 설립', isBold: true }],
         },
         {
           year: '2023',
@@ -138,10 +140,6 @@ export const siteConfig = {
           items: [
             {
               text: '03. 드론 실증도시 구축사업 물품 배송 분야 사업자 선정 (보령시 컨소시엄, 국토교통부 주관)',
-              isBold: false,
-            },
-            {
-              text: '03. 드론 실증도시 구축사업 물품 배송 분야 사업자 선정 (서산시 컨소시엄, 국토교통부 주관)',
               isBold: false,
             },
           ],
@@ -214,7 +212,8 @@ export const siteConfig = {
     },
     partners: {
       title: '협력 파트너',
-      description: '한울드론의 미래를 함께 만들고, 성장을 지지하는 든든한 동반자들입니다.',
+      description:
+        '한울드론의 미래를 함께 만들고, 성장을 지지하는 든든한 동반자들입니다.',
       items: [
         {
           name: '한서대학교',
