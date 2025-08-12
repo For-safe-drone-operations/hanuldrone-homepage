@@ -348,7 +348,6 @@ export const siteConfig = {
         id: 'address',
         text: '충청남도 태안군 남면 곰섬로 236-49, 208호(창업2관)',
       },
-      { id: 'business-number', text: '사업자 등록번호 : 596-81-02847' },
       { id: 'email', text: 'hanuldrone3@hanuldrone.com' },
     ],
     copyright: 'ⓒ 2025 한울드론. All Rights Reserved.',
