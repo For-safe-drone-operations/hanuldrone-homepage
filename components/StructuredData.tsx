@@ -1,13 +1,15 @@
-import { siteConfig } from '@/siteConfig'
+import { siteConfig } from '@/siteConfig';
+
+const siteUrl = 'https://www.hanuldrone.com';
 
 const StructuredData = () => {
   const organizationSchema = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
     name: siteConfig.company.name,
-    alternateName: siteConfig.company.name,
-    url: 'https://hanuldrone.com',
-    logo: 'https://hanuldrone.com/svg/companyLogo.svg',
+    alternateName: siteConfig.company.siteName,
+    url: siteUrl,
+    logo: `${siteUrl}/svg/companyLogo.svg`,
     contactPoint: {
       '@type': 'ContactPoint',
       telephone: '+82-041-123-4567',
@@ -28,24 +30,25 @@ const StructuredData = () => {
     description:
       '국방 드론 기술로 생명과 안전을 지키고, 지역·민간으로 가치를 확장하는 첨단 드론 솔루션 전문기업',
     sameAs: [
-      // 소셜 미디어 프로필 URL 추가
+      // 소셜 미디어 프로필 URL 있다면 추가
     ],
-  }
+  };
 
   const websiteSchema = {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
-    name: siteConfig.company.name,
-    url: 'https://hanuldrone.com',
+    name: siteConfig.company.siteName,
+    alternateName: ['한울드론', 'Hanul Drone', '(주)한울드론'],
+    url: siteUrl,
     potentialAction: {
       '@type': 'SearchAction',
       target: {
         '@type': 'EntryPoint',
-        urlTemplate: 'https://hanuldrone.com/search?q={search_term_string}',
+        urlTemplate: `${siteUrl}/search?q={search_term_string}`,
       },
       'query-input': 'required name=search_term_string',
     },
-  }
+  };
 
   const servicesSchema = siteConfig.sections.services.items.map((service) => ({
     '@context': 'https://schema.org',
@@ -64,7 +67,7 @@ const StructuredData = () => {
       '@type': 'Country',
       name: 'South Korea',
     },
-  }))
+  }));
 
   const schemas = [
     { id: 'organization', data: organizationSchema },
@@ -73,14 +76,14 @@ const StructuredData = () => {
       id: `service-${siteConfig.sections.services.items[idx].id}`,
       data: schema,
     })),
-  ]
+  ];
 
   return (
     <>
       {schemas.map((schema) => (
         <script
           key={schema.id}
-          type='application/ld+json'
+          type="application/ld+json"
           // biome-ignore lint/security/noDangerouslySetInnerHtml: Required for JSON-LD structured data
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(schema.data),
@@ -88,7 +91,7 @@ const StructuredData = () => {
         />
       ))}
     </>
-  )
-}
+  );
+};
 
-export default StructuredData
+export default StructuredData;

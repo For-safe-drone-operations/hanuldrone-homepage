@@ -1,6 +1,7 @@
 export const siteConfig = {
   company: {
     name: '(주)한울드론',
+    siteName: '한울드론(Hanul Drone)',
     establishedYear: '2022',
     description: '첨단 드론 기술로 다양한 산업 문제를 해결하고 있습니다.',
   },
@@ -20,7 +21,7 @@ export const siteConfig = {
         technology: {
           title: '한눈에 보는 (주)한울드론',
           description:
-            '(주)한울드론은 한서대학교 무인항공기학과 연구실을 기반으로 출발했습니다.\n **국방 감시·정찰·타격 드론**과 도서·산간 **긴급 물류 드론**을 전략적으로 개발·운용하고 있습니다다.',
+            '공공·국방·재난 현장에서 드론 물류배송과 대드론 대응을 통합 지원하는 전문 기업입니다. 임무 설계부터 관제·운영 체계까지, 안전하고 신뢰성 높은 드론 솔루션을 제공합니다.',
         },
         professionals: {
           title: '전문 인력',
@@ -352,6 +353,6 @@ export const siteConfig = {
     ],
     copyright: 'ⓒ 2025 한울드론. All Rights Reserved.',
   },
-}
+};
 
-export type SiteConfig = typeof siteConfig
+export type SiteConfig = typeof siteConfig;
